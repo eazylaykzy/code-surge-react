@@ -1,0 +1,106 @@
+@import "../button/mixins";
+@import "../button/variables";
+
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: unset;
+  }
+
+  &__group--cus {
+    width: 47.25% ;
+    display: inline-block;
+    float: left;
+
+    @include respond(phone) {
+      width: 100%;
+      display: block;
+      float: none;
+    }
+  }
+
+  &__input {
+    font-family: inherit;
+    color: $color-grey-dark-2;
+    padding: 1rem 1rem;
+    border-radius: 4px;
+    background-color: #272834;
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    transition: all .6s;
+
+    /*@include respond(tab-port) {
+        width: 100%;
+    }*/
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem $color-grey-dark-2;
+      border-bottom: 3px solid $color-green-primary;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+  }
+
+  &__label {
+    font-size: .8rem;
+    margin-left: 1rem;
+    margin-top: .4rem;
+    display: block;
+    transition: all .6s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+}
+
+.val_error {
+  border-bottom: 3px solid $color-secondary-dark !important;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+.success {
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba($color-grey-dark-3, 0.5);
+  color: $color-green-primary-light;
+  background-color: $color-grey-light-1;
+  border: 1px solid $color-grey-light-2;
+  border-radius: .4rem;
+  font-size: 2rem;
+  width: 90%;
+
+  @include respond(phone) {
+    font-size: 1rem;
+  }
+}
+
+.error {
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba($color-grey-dark-3, 0.5);
+  color: $color-secondary-dark;
+  background-color: $color-grey-light-2;
+  border: 1px solid rgba($color-secondary-dark, 0.3);
+  border-radius: .4rem;
+  font-size: 2rem;
+  width: 90%;
+
+  @include respond(phone) {
+    font-size: 1rem;
+  }
+}
