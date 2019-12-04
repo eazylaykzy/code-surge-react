@@ -392,6 +392,45 @@ input, textarea {
   margin-bottom: 0;
 }
 
+
+figure {
+  margin-block-start: unset;
+  margin-block-end: unset;
+  margin-inline-start: unset;
+  margin-inline-end: unset;
+
+  >img {
+    width: 100%;
+    height: 100%;
+  }
+
+  >figcaption {
+    opacity: 0;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05) translateX(0.4vw);
+    }
+
+    >h1 {
+      font: 600 16px 'Khula', sans-serif;
+      margin-block-start: unset;
+      line-height: 20px;
+      color: white;
+    }
+  }
+}
+
 .work-wrapper {
   position: absolute;
   z-index: 4;
@@ -403,8 +442,8 @@ input, textarea {
     display: block;
     > .work-panel {
       overflow: hidden;
-      cursor: pointer;
       position: absolute;
+      border-radius: 12px;
       width: 35vw;
       height: 35vh;
       border: 3px solid $color-main;
@@ -458,14 +497,14 @@ input, textarea {
       > .work-panel-cover {
         z-index: 11;
         position: absolute;
-        opacity: 0.6;
+        opacity: 0.9;
         transition: transform 1s $c-b-d;
         width: 40vw;
         height: 0;
-        top: 0;
+        top: -2px;
         right: -40vw;
         background: none;
-        border-bottom: solid #57A3E4 35vh;
+        border-bottom: solid #151515 35vh;
         border-left: solid transparent 5vw;
       }
       > .work-panel-mask {
@@ -683,6 +722,7 @@ input, textarea {
 
 .map-wrapper {
   border: 3px solid $color-main;
+  border-radius: 4px;
   z-index: 5;
   position: absolute;
   top: 50%;

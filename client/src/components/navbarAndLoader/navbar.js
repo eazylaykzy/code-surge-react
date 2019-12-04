@@ -12,10 +12,10 @@ import {ReactComponent as Works} from '../../assets/images/work.svg';
 import {ReactComponent as Contact} from '../../assets/images/mail.svg';
 import './navbarAndLoader.scss';
 
-const NavBar = ({navTopRef, navBotRef, navTopClass, navBotClass, navTopIcons, navBotIcons}) => {
+const NavBar = ({navTopRef, navBotRef, navTopIcons, navBotIcons}) => {
 	return (
 		<>
-			<nav ref={navTopRef} className={`nav-top ${navTopClass}`}>
+			<nav ref={navTopRef} className={`nav-top`}>
 				<div className='nav-wrapper top' ref={navTopIcons}>
 					<a target="_blank" className='nav-icon twitter' href='https://www.twitter.com'
 					   rel="noopener noreferrer">
@@ -35,7 +35,7 @@ const NavBar = ({navTopRef, navBotRef, navTopClass, navBotClass, navTopIcons, na
 					</a>
 				</div>
 			</nav>
-			<nav ref={navBotRef} className={`nav-bottom ${navBotClass}`} onKeyUp={document.activeElement.blur()}>
+			<nav ref={navBotRef} className={`nav-bottom`} onKeyUp={document.activeElement.blur()}>
 				<div className='nav-wrapper bot' ref={navBotIcons}>
 					<Link className='nav-icon home' to='/'>
 						<div className='hover-text'>Home</div>

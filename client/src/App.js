@@ -48,11 +48,10 @@ const App = ({location: {pathname}}) => {
 	// Refs
 	const vc = useRef(''), navTopIcons = useRef(''),
 		navBotIcons = useRef(''), navTopRef = useRef(''),
-		navBotRef = useRef(''),leftLine = useRef(''),
+		navBotRef = useRef(''), leftLine = useRef(''),
 		rightLine = useRef(''), bottomLine = useRef(''),
-		lineRef = useRef('');
-
-	console.log(navBotIcons.current.childNodes);
+		aboutRef = useRef(''), lineRef = useRef(''),
+		workRef = useRef('');
 
 	// Component States
 	const [initBackgroundActiveClass, setBackgroundActiveClass] = useState(''),
@@ -95,6 +94,8 @@ const App = ({location: {pathname}}) => {
 	useEffect(() => {
 		let navTopRefs = navTopRef.current;
 		let navBotRefs = navBotRef.current;
+		let iconListTop = Array.from(navTopIcons.current.childNodes);
+		let iconListBot = Array.from(navBotIcons.current.childNodes);
 // Toggle Light Mode on Device Shake
 		let moveCounter = 0;
 		const motion = e => {
@@ -134,9 +135,51 @@ const App = ({location: {pathname}}) => {
 					moveCounter = 0;
 				}
 			}
-		}
+		};
 		let viewRemChildrenActive = vc.current;
 		window.addEventListener("devicemotion", motion, false);
+
+
+		for (let i = 0; i < iconListBot.length; i++) {
+			iconListBot[i].classList.remove('active')
+		}
+
+		// set active nav icon
+		switch (pathname) {
+			case '/about':
+				iconListBot[1].classList.add('active');
+				break;
+			case '/skills':
+				iconListBot[2].classList.add('active');
+				break;
+			case '/works':
+				iconListBot[3].classList.add('active');
+				break;
+			case '/contact':
+				iconListBot[4].classList.add('active');
+				break;
+			default:
+				iconListBot[0].classList.add('active');
+		}
+
+		// work & about overflow styling
+		if (pathname === '/works' || pathname === '/about') {
+			let container = workRef.current || aboutRef.current,
+				wrapper = container.parentNode;
+
+			container.addEventListener('scroll', () => {
+				if (isMobile() || isTablet()) {
+					if (container.scrollTop !== 0) {
+						if (container.scrollHeight - container.offsetHeight === container.scrollTop) {
+							wrapper.classList.add('fade-top');
+						} else {
+							wrapper.classList.add('fade-top-bottom');
+							wrapper.classList.remove('fade-top');
+						}
+					} else wrapper.classList.remove('fade-top', 'fade-top-bottom');
+				}
+			});
+		}
 
 		const adjustContentSliders = () => {
 			if (pathname === '/about' || pathname === '/skills') {
@@ -157,6 +200,9 @@ const App = ({location: {pathname}}) => {
 				if ((isMobile() && isPortrait()) || (!isTablet() && pathname === '/contact')) {
 					navTopRef.current.classList.add('flat');
 					navBotRef.current.classList.add('flat');
+				} else {
+					navTopRef.current.classList.remove('flat');
+					navBotRef.current.classList.remove('flat');
 				}
 			}, 300)
 		};
@@ -206,8 +252,6 @@ const App = ({location: {pathname}}) => {
 			}, 1600);
 
 			// random icon reveal animation handler
-			let iconListTop = Array.from(navTopIcons.current.childNodes);
-			let iconListBot = Array.from(navBotIcons.current.childNodes);
 			setTimeout(function () {
 
 				function showRandomIcon(iconList) {
@@ -286,9 +330,9 @@ const App = ({location: {pathname}}) => {
 				<div className='view-container' ref={vc}>
 					<Switch>
 						<Route exact path='/' render={props => <Home {...props} />}/>
-						<Route path='/about' render={props => <About {...props} lineRef={lineRef}/>}/>
+						<Route path='/about' render={props => <About {...props} lineRef={lineRef} aboutRef={aboutRef}/>}/>
 						<Route path='/skills' render={props => <Skills {...props} lineRef={lineRef}/>}/>
-						<Route path='/works' render={props => <Works {...props} />}/>
+						<Route path='/works' render={props => <Works {...props} workRef={workRef}/>}/>
 						<Route path='/contact' render={props => <Contact {...props} />}/>
 					</Switch>
 				</div>

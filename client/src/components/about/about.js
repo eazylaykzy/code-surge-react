@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-const About = ({lineRef}) => {
+const About = ({lineRef, aboutRef}) => {
 
 	useEffect(() => {
 		return () => {
@@ -11,7 +11,7 @@ const About = ({lineRef}) => {
 	return (
 		<>
 			<div className='view about'>
-				<div className='header-container about'>
+				<div ref={aboutRef} className='header-container about'>
 					<div className='header-title-wrap'>
 						<div className='cover'/>
 						<h1 className='header big first'>About</h1>
@@ -34,14 +34,14 @@ const About = ({lineRef}) => {
 								that came along with<strong> Java</strong> development. Over the years, I went onto work with some
 								wonderful people, who would go onto become amazing friends and mentors.</p></div>
 						<div className="header-content-body gap about-three">
-							<div className="line-left"></div>
+							<div className="line-left"/>
 							<p className="header body gap about-three">As time progressed, and the Minecraft community moved on, I
 								began looking for another platform to mirror my creative desires. I had messed around with
 								some web-based ideas before, but I had never fully immersed myself into the space - and man am I glad
 								that I did.</p>
 						</div>
 						<div className="header-content-body gap about-four">
-							<div className="line-left"></div>
+							<div className="line-left"/>
 							<p className="header body gap about-four">The switch to web was daunting at first, but as I stuck with it,
 								my love for the space grew - and I know now that it is where I belong. Other than programming, over
 								the years, I've also come to love<strong> cooking</strong>,<strong> fitness</strong>, and<strong>

@@ -76,9 +76,9 @@ const Contact = () => {
 				<div className='header-container contact'>
 					<div className='header-title-wrap'>
 						<div className='cover'/>
-						<h1 className='header big first'>Let</h1>
-						<h1 className='header big middle'>'s</h1>
-						<h1 className='header big last'>Connect</h1>
+						<h1 className='header big first'>Get</h1>
+						<h1 className='header big middle'>In</h1>
+						<h1 className='header big last'>Touch</h1>
 					</div>
 					<div className='header-info-wrap'>
 						<div className='cover'/>
