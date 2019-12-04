@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 
-const About = () => {
+const About = ({lineRef}) => {
+
 	useEffect(() => {
 		return () => {
 			console.log('About Component will unmount');
@@ -16,7 +17,7 @@ const About = () => {
 						<h1 className='header big first'>About</h1>
 						<h1 className='header big last'>Me</h1>
 					</div>
-					<div className='header-info-wrap'>
+					<div ref={lineRef} className='header-info-wrap'>
 						<div className="header-content-body about-one">
 							<div className="line-left"/>
 							<p className="header body about-one">Hi, I'm Sam, a 19-year-old<strong> Full-Stack Web Developer</strong>.

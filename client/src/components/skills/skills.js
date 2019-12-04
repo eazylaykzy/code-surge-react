@@ -4,7 +4,7 @@ import $ from "jquery";
 import '../viewComponents.scss';
 import {totalSkills} from './skillsData';
 
-const Skills = () => {
+const Skills = ({lineRef}) => {
 	let skillWrap = useRef();
 
 	useEffect(() => {
@@ -34,7 +34,7 @@ const Skills = () => {
 						<h1 className='header big first'>My</h1>
 						<h1 className='header big last'>Skillsset</h1>
 					</div>
-					<div className='header-info-wrap'>
+					<div ref={lineRef} className='header-info-wrap'>
 						<div className="header-content-body skill-one">
 							<div className="line-left"/>
 							<p className="header body about-one">

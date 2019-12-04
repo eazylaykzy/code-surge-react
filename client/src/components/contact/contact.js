@@ -129,8 +129,8 @@ const Contact = () => {
 					</div>
 				</div>
 			</div>
-			<div className='map-wrapper active-f active'>
-				<div id='map'><GoogleMap/></div>
+			<div className='map-wrapper'>
+				<div className='map'><GoogleMap/></div>
 			</div>
 		</>
 	)

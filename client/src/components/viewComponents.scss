@@ -15,10 +15,10 @@ $c-b-d: cubic-bezier(.03, .88, .33, .98);
 // view / header styling
 @font-face {
   font-family: Etna;
-  src: url(../assets/fonts/Etna.otf);
+  src: url("../assets/fonts/etna-free-font.otf");
 }
 
-@import url('https://fonts.googleapis.com/css?family=Khula:600,800'); /* PROJECTS CONSTANTS */
+@import url('https://fonts.googleapis.com/css?family=Khula:600,800');
 
 h1, h2 {
   font-weight: 500;
@@ -1475,7 +1475,7 @@ body {
         margin: 0 auto !important;
         padding: 0 !important;
         flex-direction: column !important;
-        align-items: left !important;
+        align-items: flex-start !important;
         .work-panel {
           position: relative !important;
           left: 0 !important;

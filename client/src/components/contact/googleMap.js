@@ -369,7 +369,7 @@ const GoogleMaps = () => {
 				center: myLocation,
 				disableDefaultUI: true,
 				styles: styleDark
-			});
+			}, []);
 
 		const createMarker = () =>
 			new window.google.maps.Marker({

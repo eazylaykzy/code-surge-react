@@ -35,24 +35,31 @@ const isDark = () => {
 	return (localStorage.getItem('color') === 'dark')
 };
 
+// toggle local storage value 'color' when necessary
+const toggleLocalStorage = () => {
+	if (localStorage.getItem('color') === null) {
+		localStorage.setItem('color', 'dark');
+	} else {
+		localStorage.removeItem('color');
+	}
+};
+
 const App = ({location: {pathname}}) => {
 	// Refs
-	const vc = useRef('');
-	const navTopIcons = useRef('');
-	const navBotIcons = useRef('');
-	const leftLine = useRef('');
-	const rightLine = useRef('');
-	const bottomLine = useRef('');
+	const vc = useRef(''), navTopIcons = useRef(''),
+		navBotIcons = useRef(''), navTopRef = useRef(''),
+		navBotRef = useRef(''),leftLine = useRef(''),
+		rightLine = useRef(''), bottomLine = useRef(''),
+		lineRef = useRef('');
+
+	console.log(navBotIcons.current.childNodes);
 
 	// Component States
-	const [initBackgroundActiveClass, setBackgroundActiveClass] = useState('');
-	const [initLightModeClass, setLightModeClass] = useState('');
-	const [initNavTopClass, setNavTopClass] = useState('');
-	const [initNavBotClass, setNavBotClass] = useState('');
-	// --- Device Motion State ---
-	let [lastX, setlastX] = useState();
-	let [lastY, setlastY] = useState();
-	let [lastZ, setlastZ] = useState();
+	const [initBackgroundActiveClass, setBackgroundActiveClass] = useState(''),
+		[initLightModeClass, setLightModeClass] = useState('');
+
+	// --- Device Motion State Variables ---
+	let [lastX, setlastX] = useState(), [lastY, setlastY] = useState(), [lastZ, setlastZ] = useState();
 
 	const updateView = () => {
 		let viewChildrenActive = vc.current.childNodes;
@@ -69,10 +76,28 @@ const App = ({location: {pathname}}) => {
 		}
 	};
 
+	// Notification settings
+	const createNotification = message => {
+		let notification = document.getElementById('notification');
+
+		notification.innerHTML = message;
+		let notificationWidth = parseFloat(window.getComputedStyle(notification, null).getPropertyValue('width'));
+		notification.style.left = '-' + notificationWidth + 'px';
+		notification.style.transform = 'translateX(' + (notificationWidth + 20) + 'px)';
+		notification.classList.add('active');
+
+		setTimeout(() => {
+			notification.style.transform = 'none';
+			notification.classList.remove('active');
+		}, 5000);
+	};
+
 	useEffect(() => {
+		let navTopRefs = navTopRef.current;
+		let navBotRefs = navBotRef.current;
 // Toggle Light Mode on Device Shake
 		let moveCounter = 0;
-		function motion(e) {
+		const motion = e => {
 			let acc = e.acceleration;
 			if (!acc.hasOwnProperty("x")) {
 				acc = e.accelerationIncludingGravity;
@@ -112,6 +137,37 @@ const App = ({location: {pathname}}) => {
 		}
 		let viewRemChildrenActive = vc.current;
 		window.addEventListener("devicemotion", motion, false);
+
+		const adjustContentSliders = () => {
+			if (pathname === '/about' || pathname === '/skills') {
+				let bodies = lineRef.current.childNodes;
+				for (let b = 0; b < bodies.length; b++) {
+					let bodyHeight = parseInt(window.getComputedStyle(bodies[b], null).getPropertyValue('height'));
+					bodies[b].style.height = bodyHeight - bodyHeight * .05 + 'px';
+				}
+			}
+		};
+
+		adjustContentSliders();
+		window.addEventListener('resize', adjustContentSliders);
+
+		// Mobile Style Handlers
+		const adjustNavBars = () => {
+			setTimeout(function () {
+				if ((isMobile() && isPortrait()) || (!isTablet() && pathname === '/contact')) {
+					navTopRef.current.classList.add('flat');
+					navBotRef.current.classList.add('flat');
+				}
+			}, 300)
+		};
+
+		setTimeout(() => {
+			navTopRefs.classList.remove('flat');
+			navBotRefs.classList.remove('flat');
+			navTopRefs.style.opacity = '0';
+			navBotRefs.style.opacity = '0';
+		}, 300);
+
 		setTimeout(() => {
 			if (pathname === '/contact' || (isMobile() && isPortrait())) {
 				leftLine.current.style.visibility = 'visible';
@@ -140,8 +196,10 @@ const App = ({location: {pathname}}) => {
 
 			setTimeout(function () {
 				setBackgroundActiveClass('active');
-				setNavTopClass('transition active');
-				setNavBotClass('transition active');
+				navTopRefs.classList.add('transition', 'active');
+				navBotRefs.classList.add('transition', 'active');
+				navTopRefs.style.opacity = '1';
+				navBotRefs.style.opacity = '1';
 				leftLine.current.style.display = 'none';
 				rightLine.current.style.display = 'none';
 				bottomLine.current.style.display = 'none';
@@ -193,14 +251,19 @@ const App = ({location: {pathname}}) => {
 					// createNotification('Shake device to toggle night mode.')
 				}
 			}, 2500);
+
+			adjustNavBars();
+			window.addEventListener('resize', adjustNavBars);
 		});
 
 		return () => {
 			updateViewWhenUnmounting(viewRemChildrenActive);
 			window.removeEventListener("devicemotion", motion, false);
+			window.removeEventListener('resize', adjustContentSliders);
+			window.removeEventListener('resize', adjustNavBars);
+			navTopRefs.classList.remove('active');
+			navBotRefs.classList.remove('active');
 			setLightModeClass('');
-			setNavTopClass('transition');
-			setNavBotClass('transition');
 			setBackgroundActiveClass('active transition');
 		}
 	}, [pathname, lastX, lastY, lastZ]);
@@ -214,19 +277,19 @@ const App = ({location: {pathname}}) => {
 			</div>
 			<div className='site-wrap'>
 				<NavBar
-					navTopClass={initNavTopClass}
-					navBotClass={initNavBotClass}
+					navTopRef={navTopRef}
+					navBotRef={navBotRef}
 					navTopIcons={navTopIcons}
 					navBotIcons={navBotIcons}
 				/>
 				<ThemeButton classProps={initLightModeClass}/>
 				<div className='view-container' ref={vc}>
 					<Switch>
-						<Route exact path='/' component={Home}/>
-						<Route path='/about' component={About}/>
-						<Route path='/skills' component={Skills}/>
-						<Route path='/works' component={Works}/>
-						<Route path='/contact' component={Contact}/>
+						<Route exact path='/' render={props => <Home {...props} />}/>
+						<Route path='/about' render={props => <About {...props} lineRef={lineRef}/>}/>
+						<Route path='/skills' render={props => <Skills {...props} lineRef={lineRef}/>}/>
+						<Route path='/works' render={props => <Works {...props} />}/>
+						<Route path='/contact' render={props => <Contact {...props} />}/>
 					</Switch>
 				</div>
 				<Particles classProps={initBackgroundActiveClass}/>
