@@ -2,6 +2,7 @@
 $color-orange: #fb856f;
 $color-blue: #57a3e4;
 $color-main: #4c4f65;
+$color-main-dark-purple: #2e0a3d;
 $color-secondary: #66697E;
 $color-main-dark: #5D6075;
 $color-secondary-dark: #15151e;
@@ -20,7 +21,7 @@ $loading-line-offset-down-flat: calc(#{-$loading-line-length-flat} - 100vh);
 $loading-line-offset-right-tablet: calc(-100vw + 20px);
 
 .site-loader.dark .line {
-  border-color: #e3e3e5;
+  border-color: $color-main-dark-purple;
 }
 
 .line {
@@ -126,7 +127,7 @@ nav {
     }
   }
   &.dark {
-    background-color: #e3e3e5;
+    background-color: $color-main-dark-purple;
   }
   .nav-wrapper {
     position: absolute;

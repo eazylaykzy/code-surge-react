@@ -10,7 +10,7 @@ const About = ({lineRef, aboutRef}) => {
 
 	return (
 		<>
-			<div className='view about'>
+			<div className='view about dark'>
 				<div ref={aboutRef} className='header-container about'>
 					<div className='header-title-wrap'>
 						<div className='cover'/>

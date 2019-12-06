@@ -2,6 +2,8 @@
 $color-orange: #fb856f;
 $color-blue: #57a3e4;
 $color-main: #4c4f65;
+$color-main-dark-purple: #2e0a3d;
+$color-main-light-purple: #9528bd;
 $color-secondary: #66697E;
 $color-main-dark: #5D6075;
 $color-secondary-dark: #15151e;
@@ -242,7 +244,7 @@ body {
   }
   &.contact {
     left: 9.3vw;
-    top: 23vh;
+    top: 16vh;
     //width: 32vw;
     transform: none;
     -webkit-transform: none;
@@ -585,7 +587,7 @@ figure {
       }
     }
   }
-  form {
+  /*form {
     > div {
       cursor: text;
       padding: 0;
@@ -596,11 +598,11 @@ figure {
         margin-left: 8vw;
         font: 600 14px 'Khula', sans-serif;
         width: 100%;
-        border: 0;
+        //border: 0;
         background-color: #f7f7f7;
         height: 50px;
         color: $color-main;
-        padding: 0 20px;
+        //padding: 0 20px;
         box-sizing: border-box;
         transition: opacity $c-b-d .5s;
         &.submit-button {
@@ -692,7 +694,7 @@ figure {
         }
       }
     }
-  }
+  }*/
 }
 
 .view.active-f .contact-form > form > div {
@@ -703,7 +705,7 @@ figure {
 
 .view.dark .contact-form > form > div {
   > input, textarea {
-    background-color: lighten(#1C1D25, 5%);
+    background-color: #421254;
     color: lighten(#1C1D25, 25%);
     &.submit-button {
       background-color: #e3e3e5;
@@ -732,7 +734,7 @@ figure {
   &.dark {
     border: 3px solid #C4C4C6;
     &:before {
-      border-bottom-color: #3C3C3C;
+      border-bottom-color: $color-main-dark-purple;
     }
   }
   &.dark > .map > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw {
@@ -776,7 +778,7 @@ figure {
   }
   &:after {
     z-index: 1;
-    border-bottom-color: #1D71B8;
+    border-bottom-color: $color-main-light-purple;
     transition: transform .5s .9s;
   }
   &.active:before, &.active:after {

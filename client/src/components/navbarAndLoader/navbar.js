@@ -15,7 +15,7 @@ import './navbarAndLoader.scss';
 const NavBar = ({navTopRef, navBotRef, navTopIcons, navBotIcons}) => {
 	return (
 		<>
-			<nav ref={navTopRef} className={`nav-top`}>
+			<nav ref={navTopRef} className={`nav-top dark`}>
 				<div className='nav-wrapper top' ref={navTopIcons}>
 					<a target="_blank" className='nav-icon twitter' href='https://www.twitter.com'
 					   rel="noopener noreferrer">
@@ -35,7 +35,8 @@ const NavBar = ({navTopRef, navBotRef, navTopIcons, navBotIcons}) => {
 					</a>
 				</div>
 			</nav>
-			<nav ref={navBotRef} className={`nav-bottom`} onKeyUp={document.activeElement.blur()}>
+			<nav ref={navBotRef} className={`nav-bottom dark`}
+			     onKeyUp={document.activeElement.blur()}>
 				<div className='nav-wrapper bot' ref={navBotIcons}>
 					<Link className='nav-icon home' to='/'>
 						<div className='hover-text'>Home</div>

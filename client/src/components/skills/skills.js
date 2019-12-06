@@ -27,7 +27,7 @@ const Skills = ({lineRef}) => {
 
 	return (
 		<>
-			<div className='view skills'>
+			<div className='view skills dark'>
 				<div className='header-container skills'>
 					<div className='header-title-wrap'>
 						<div className='cover'/>
@@ -52,7 +52,7 @@ const Skills = ({lineRef}) => {
 					</div>
 				</div>
 			</div>
-			<div className='skill-container'>
+			<div className='skill-container dark'>
 				<div ref={skillWrap} id="list" className='skill-wrap'>
 					{totalSkills.map((skill, i) => <div key={i} className='skill'>{skill}</div>)}
 				</div>

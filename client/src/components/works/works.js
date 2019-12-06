@@ -9,7 +9,7 @@ import '../viewComponents.scss';
 
 const Works = ({workRef}) => {
 	return (
-		<div className='work-wrapper'>
+		<div className='work-wrapper dark'>
 			<div className='work-container' ref={workRef}>
 				<div className='work-list'>
 					<figure className='work-panel timer'>

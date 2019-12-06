@@ -13,7 +13,7 @@ const ThemeButton = ({classProps}) => {
 	}, [initMode]);
 
 	return (
-		<div onClick={() => toggleMode(!initMode)} className={`light-mode ${classProps}`}>
+		<div onClick={() => toggleMode(!initMode)} className={`light-mode dark contact ${classProps}`}>
 			{
 				initMode ? <Sun className='sun'/>
 				: <Moon className='moon'/>

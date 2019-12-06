@@ -12,7 +12,7 @@ const Home = () => {
 
 	return (
 		<Fragment>
-			<div className='view home'>
+			<div className='view home dark'>
 				<div className='home header-container'>
 					<div className='header-title-wrap'>
 						<div className='cover'/>
@@ -33,7 +33,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className='logo-big'>
+			<div className='logo-big dark'>
 				<Logo/>
 			</div>
 		</Fragment>

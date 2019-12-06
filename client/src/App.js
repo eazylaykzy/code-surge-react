@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import {Route, Switch, withRouter} from "react-router-dom";
+import axios from 'axios';
 
 import ThemeButton from "./components/themeButton/themeButton";
 import About from "./components/about/about";
@@ -51,11 +52,14 @@ const App = ({location: {pathname}}) => {
 		navBotRef = useRef(''), leftLine = useRef(''),
 		rightLine = useRef(''), bottomLine = useRef(''),
 		aboutRef = useRef(''), lineRef = useRef(''),
-		workRef = useRef('');
+		workRef = useRef(''), notificationRef = useRef(''),
+		nameRef = useRef(''), emailRef = useRef(''),
+		subjectRef = useRef(''), messageRef = useRef('');
 
 	// Component States
 	const [initBackgroundActiveClass, setBackgroundActiveClass] = useState(''),
-		[initLightModeClass, setLightModeClass] = useState('');
+		[initLightModeClass, setLightModeClass] = useState(''),
+		[initClearForm, setClearForm] = useState(false);
 
 	// --- Device Motion State Variables ---
 	let [lastX, setlastX] = useState(), [lastY, setlastY] = useState(), [lastZ, setlastZ] = useState();
@@ -77,7 +81,7 @@ const App = ({location: {pathname}}) => {
 
 	// Notification settings
 	const createNotification = message => {
-		let notification = document.getElementById('notification');
+		let notification = notificationRef.current;
 
 		notification.innerHTML = message;
 		let notificationWidth = parseFloat(window.getComputedStyle(notification, null).getPropertyValue('width'));
@@ -89,6 +93,30 @@ const App = ({location: {pathname}}) => {
 			notification.style.transform = 'none';
 			notification.classList.remove('active');
 		}, 5000);
+	};
+
+	// Form submit handler
+	const handleFormSubmit = e => {
+		const name = nameRef.current.value, email = emailRef.current.value,
+			subject = subjectRef.current.value, message = messageRef.current.value;
+		e.preventDefault();
+		axios({
+			method: "POST",
+			url:"http://localhost:3002/send",
+			data: {
+				name,
+				email,
+				subject,
+				message,
+			}
+		}).then((response)=>{
+			if (response.data.msg === 'success'){
+				createNotification('Message received, thank you.');
+				setClearForm(true);
+			}else if(response.data.msg === 'fail'){
+				createNotification(`Hmm... Something went wrong!`);
+			}
+		})
 	};
 
 	useEffect(() => {
@@ -292,7 +320,7 @@ const App = ({location: {pathname}}) => {
 			setTimeout(() => {
 				setLightModeClass('active');
 				if (pathname === '/' && isMobile()) {
-					// createNotification('Shake device to toggle night mode.')
+					createNotification('Shake device to toggle night mode.')
 				}
 			}, 2500);
 
@@ -314,7 +342,7 @@ const App = ({location: {pathname}}) => {
 
 	return (
 		<>
-			<div className='site-loader active'>
+			<div className='site-loader dark active'>
 				<span ref={leftLine} className={`line left`}/>
 				<span ref={rightLine} className={`line right`}/>
 				<span ref={bottomLine} className={`line bottom`}/>
@@ -327,13 +355,17 @@ const App = ({location: {pathname}}) => {
 					navBotIcons={navBotIcons}
 				/>
 				<ThemeButton classProps={initLightModeClass}/>
+				<div className='dark notification' ref={notificationRef}/>
 				<div className='view-container' ref={vc}>
 					<Switch>
 						<Route exact path='/' render={props => <Home {...props} />}/>
 						<Route path='/about' render={props => <About {...props} lineRef={lineRef} aboutRef={aboutRef}/>}/>
 						<Route path='/skills' render={props => <Skills {...props} lineRef={lineRef}/>}/>
 						<Route path='/works' render={props => <Works {...props} workRef={workRef}/>}/>
-						<Route path='/contact' render={props => <Contact {...props} />}/>
+						<Route path='/contact' render={props => <Contact {...props}
+						  nameRef={nameRef} emailRef={emailRef} subjectRef={subjectRef} messageRef={messageRef}
+						  handleSubmit={handleFormSubmit} clearForm={initClearForm}
+						/>}/>
 					</Switch>
 				</div>
 				<Particles classProps={initBackgroundActiveClass}/>

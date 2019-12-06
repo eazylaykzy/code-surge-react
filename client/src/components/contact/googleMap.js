@@ -3,7 +3,7 @@ import React, {useEffect, useRef} from 'react';
 import LogoMarker from "../../assets/images/logoMarkerDark.svg";
 
 // Variables
-const GOOGLE_MAP_API_KEY = 'AIzaSyDdXBTcMBFHexWDQh6gZa37ehtDNa1nf2U';
+const mapApiKey = process.env.REACT_APP_MapAPIKey;
 const myLocation = {
 	lat: 6.6765,
 	lng: 3.2920
@@ -382,7 +382,7 @@ const GoogleMaps = () => {
 			let body = document.body.children;
 			let gMapInDom = false;
 			for (let i=0; i<body.length; i++) {
-				if (body[i].outerHTML.includes('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdXBTcMBFHexWDQh6gZa37ehtDNa1nf2U&amp;libraries=places" async=""></script>')) {
+				if (body[i].outerHTML.includes(`<script src="https://maps.googleapis.com/maps/api/js?key=${mapApiKey}&amp;libraries=places" async=""></script>`)) {
 					gMapInDom = true;
 				}
 			}
@@ -402,7 +402,7 @@ const GoogleMaps = () => {
 			}
 		};
 
-		const url = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAP_API_KEY}&libraries=places`;
+		const url = `https://maps.googleapis.com/maps/api/js?key=${mapApiKey}&libraries=places`;
 		gMapScript(url);
 	}, []);
 
