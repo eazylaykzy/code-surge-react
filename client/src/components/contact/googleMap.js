@@ -348,12 +348,83 @@ const styleDark = [
 		]
 	}
 ];
+const styleLight = [
+	{
+		"featureType": "all",
+		"elementType": "all",
+		"stylers": [
+			{
+				"hue": "#ff0000"
+			},
+			{
+				"saturation": -100
+			},
+			{
+				"lightness": -30
+			}
+		]
+	},
+	{
+		"featureType": "all",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "#ffffff"
+			}
+		]
+	},
+	{
+		"featureType": "all",
+		"elementType": "labels.text.stroke",
+		"stylers": [
+			{
+				"color": "#353535"
+			}
+		]
+	},
+	{
+		"featureType": "landscape",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "#656565"
+			}
+		]
+	},
+	{
+		"featureType": "poi",
+		"elementType": "geometry.fill",
+		"stylers": [
+			{
+				"color": "#505050"
+			}
+		]
+	},
+	{
+		"featureType": "poi",
+		"elementType": "geometry.stroke",
+		"stylers": [
+			{
+				"color": "#808080"
+			}
+		]
+	},
+	{
+		"featureType": "road",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "#454545"
+			}
+		]
+	}
+];
 const mapDivStyles = {
 	width: '100%',
 	height: '100%',
 };
 
-const GoogleMaps = () => {
+const GoogleMaps = ({isLight}) => {
 	// refs
 	const googleMapRef = useRef('');
 	const googleMap = useRef(null);
@@ -368,7 +439,7 @@ const GoogleMaps = () => {
 				zoom: 12,
 				center: myLocation,
 				disableDefaultUI: true,
-				styles: styleDark
+				styles: isLight ? styleLight : styleDark
 			}, []);
 
 		const createMarker = () =>
@@ -404,7 +475,7 @@ const GoogleMaps = () => {
 
 		const url = `https://maps.googleapis.com/maps/api/js?key=${mapApiKey}&libraries=places`;
 		gMapScript(url);
-	}, []);
+	}, [isLight]);
 
 	return (
 		<div

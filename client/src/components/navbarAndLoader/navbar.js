@@ -17,19 +17,19 @@ const NavBar = ({navTopRef, navBotRef, navTopIcons, navBotIcons}) => {
 		<>
 			<nav ref={navTopRef} className={`nav-top dark`}>
 				<div className='nav-wrapper top' ref={navTopIcons}>
-					<a target="_blank" className='nav-icon twitter' href='https://www.twitter.com'
+					<a target="_blank" className='nav-icon twitter' href='https://www.twitter.com/eazylaykzy'
 					   rel="noopener noreferrer">
 						<TwitterIcon/>
 					</a>
-					<a target="_blank" className='nav-icon linkedln' href='https://www.linkedln.com'
+					<a target="_blank" className='nav-icon linkedIn' href='https://www.linkedin.com/in/eazylaykzy'
 					   rel="noopener noreferrer">
 						<Linkedln/>
 					</a>
-					<a target="_blank" className='nav-icon github' href='https://www.github.com'
+					<a target="_blank" className='nav-icon github' href='https://www.github.com/eazylaykzy'
 					   rel="noopener noreferrer">
 						<Github/>
 					</a>
-					<a target="_blank" className='nav-icon codepen' href='https://www.codepen.com'
+					<a target="_blank" className='nav-icon codepen' href='https://codesandbox.io/u/eazylaykzy'
 					   rel="noopener noreferrer">
 						<Codepen/>
 					</a>

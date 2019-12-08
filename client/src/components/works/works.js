@@ -19,7 +19,7 @@ const Works = ({workRef}) => {
 						<img src={Omnifood} alt=""/>
 						<figcaption>
 							<h1>Omnifood is a food delivery website application template, for ordering food based on location.</h1>
-							<Button classProps={`btn btn--ghost-small`} url={`https://google.com`} target={`_blank`}>Visit
+							<Button classProps={`btn btn--ghost-small`} url={`https://omnifoods.herokuapp.com/`} target={`_blank`}>Visit
 								Website</Button>
 						</figcaption>
 					</figure>
@@ -29,8 +29,7 @@ const Works = ({workRef}) => {
 						<div className='work-panel-mask'/>
 						<img src={EazyCommerce} alt=""/>
 						<figcaption>
-							<h1>EazyCommerce is an e-commerce app built on top of the React Javascript library, it uses stripe to
-								process payment, Firebase as it's backend, Firestore as it's Database.</h1>
+							<h1>EazyCommerce is an e-commerce app built on top of the React JS, it uses stripe for payment processing.</h1>
 							<Button classProps={`btn btn--ghost-small`} url={`https://eazy-commerce.herokuapp.com/`}
 							        target={`_blank`}>Visit Website</Button>
 						</figcaption>
@@ -43,7 +42,7 @@ const Works = ({workRef}) => {
 						<figcaption>
 							<h1>This is a simple Node.JS chat app, hosted on Heroku, I developed it using Socket.io, Express.JS, Pug,
 								Mustache.</h1>
-							<Button classProps={`btn btn--ghost-small`} url={`https://google.com`} target={`_blank`}>Visit
+							<Button classProps={`btn btn--ghost-small`} url={`https://arcane-dusk-68316.herokuapp.com/`} target={`_blank`}>Visit
 								Website</Button>
 						</figcaption>
 					</figure>

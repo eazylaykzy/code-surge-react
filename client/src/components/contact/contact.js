@@ -6,7 +6,7 @@ import '../button/button.scss';
 import './contact-form.scss';
 import '../viewComponents.scss';
 
-const Contact = ({nameRef, emailRef, subjectRef, messageRef, handleSubmit, clearForm}) => {
+const Contact = ({nameRef, emailRef, subjectRef, messageRef, handleSubmit, clearForm, isLight}) => {
 	const [initName, setName] = useState(''), [initEmail, setEmail] = useState(''),
 		[initSubject, setSubject] = useState(''), [initMessage, setMessage] = useState(''),
 		[initButton, setButton] = useState('disabled'), [initMailVal, setMailVal] = useState('');
@@ -96,7 +96,7 @@ const Contact = ({nameRef, emailRef, subjectRef, messageRef, handleSubmit, clear
 				</div>
 			</div>
 			<div className='map-wrapper dark'>
-				<div className='map'><GoogleMap/></div>
+				<div className='map'><GoogleMap isLight={isLight}/></div>
 			</div>
 		</>
 	)

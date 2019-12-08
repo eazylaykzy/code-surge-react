@@ -5,7 +5,6 @@ const ParticlesJS = ({classProps}) => {
 	const styles = {
 		fontFamily: "sans-serif",
 		textAlign: "center",
-		backgroundColor: "rgb(52, 17, 77)"
 	};
 
 	const particlesParam = {

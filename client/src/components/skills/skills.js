@@ -52,7 +52,7 @@ const Skills = ({lineRef}) => {
 					</div>
 				</div>
 			</div>
-			<div className='skill-container dark'>
+			<div className='skill-container'>
 				<div ref={skillWrap} id="list" className='skill-wrap'>
 					{totalSkills.map((skill, i) => <div key={i} className='skill'>{skill}</div>)}
 				</div>

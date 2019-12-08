@@ -2,7 +2,6 @@ import React, {useEffect, useState, useRef} from 'react';
 import {Route, Switch, withRouter} from "react-router-dom";
 import axios from 'axios';
 
-import ThemeButton from "./components/themeButton/themeButton";
 import About from "./components/about/about";
 import Home from "./components/home/home";
 import Skills from "./components/skills/skills";
@@ -14,6 +13,8 @@ import NavBar from "./components/navbarAndLoader/navbar";
 
 import './components/viewComponents.scss';
 import './components/navbarAndLoader/navbarAndLoader.scss';
+import {ReactComponent as Sun} from "./assets/images/sun.svg";
+import {ReactComponent as Moon} from "./assets/images/moon.svg";
 
 const mobileWidth = 1024;
 
@@ -32,18 +33,17 @@ const isTablet = () => {
 	return ((window.innerWidth <= 1024 || window.innerHeight < 768) && !(isPortrait()));
 };
 
-const isDark = () => {
-	return (localStorage.getItem('color') === 'dark')
-};
-
-// toggle local storage value 'color' when necessary
+// toggle local storage value 'mode' when necessary
 const toggleLocalStorage = () => {
-	if (localStorage.getItem('color') === null) {
-		localStorage.setItem('color', 'dark');
+	if (localStorage.getItem('mode') === null) {
+		localStorage.setItem('mode', 'light');
 	} else {
-		localStorage.removeItem('color');
+		localStorage.removeItem('mode');
 	}
 };
+/*const isLight = () => {
+	return (localStorage.getItem('mode') === 'light')
+};*/
 
 const App = ({location: {pathname}}) => {
 	// Refs
@@ -54,12 +54,13 @@ const App = ({location: {pathname}}) => {
 		aboutRef = useRef(''), lineRef = useRef(''),
 		workRef = useRef(''), notificationRef = useRef(''),
 		nameRef = useRef(''), emailRef = useRef(''),
-		subjectRef = useRef(''), messageRef = useRef('');
+		subjectRef = useRef(''), messageRef = useRef(''),
+		loaderRef = useRef(''), themeButton = useRef('');
 
 	// Component States
 	const [initBackgroundActiveClass, setBackgroundActiveClass] = useState(''),
-		[initLightModeClass, setLightModeClass] = useState(''),
-		[initClearForm, setClearForm] = useState(false);
+		[initClearForm, setClearForm] = useState(false),
+		[isLight, setIsLight] = useState(localStorage.getItem('mode') === 'light');
 
 	// --- Device Motion State Variables ---
 	let [lastX, setlastX] = useState(), [lastY, setlastY] = useState(), [lastZ, setlastZ] = useState();
@@ -69,8 +70,7 @@ const App = ({location: {pathname}}) => {
 		for (let n = 0; n < viewChildrenActive.length; n++) {
 			viewChildrenActive[n].classList.add('active');
 			viewChildrenActive[n].classList.add('active-f');
-			/*if (localStorage.getItem('color') === 'dark')
-				viewChildrenActive[n].classList.add('dark');*/
+			if (localStorage.getItem('mode') === 'light') viewChildrenActive[n].classList.remove('dark');
 		}
 	};
 	const updateViewWhenUnmounting = (viewChildren) => {
@@ -78,6 +78,34 @@ const App = ({location: {pathname}}) => {
 			viewChildren.childNodes[n].classList.remove('active');
 		}
 	};
+
+	// toggle viewChildren class 'dark'
+	const toggleViewChildren = () => {
+		if (isLight) {
+			setTimeout(() => {
+				let viewChildrenToggleActive = vc.current.childNodes;
+				vc.current.parentNode.parentNode.parentNode.style.backgroundColor = '#ecf0f1';
+				navTopRef.current.classList.remove('dark');
+				navBotRef.current.classList.remove('dark');
+				loaderRef.current.classList.remove('dark');
+				for (let n = 0; n < viewChildrenToggleActive.length; n++) {
+					viewChildrenToggleActive[n].classList.remove('dark');
+				}
+			}, 0)
+		} else {
+			setTimeout(() => {
+				let viewChildrenToggleActive = vc.current.childNodes;
+				vc.current.parentNode.parentNode.parentNode.style.backgroundColor = 'rgb(52, 17, 77)';
+				navTopRef.current.classList.add('dark');
+				navBotRef.current.classList.add('dark');
+				loaderRef.current.classList.add('dark');
+				for (let n = 0; n < viewChildrenToggleActive.length; n++) {
+					viewChildrenToggleActive[n].classList.add('dark');
+				}
+			}, 0)
+		}
+	};
+	toggleViewChildren();
 
 	// Notification settings
 	const createNotification = message => {
@@ -95,6 +123,12 @@ const App = ({location: {pathname}}) => {
 		}, 5000);
 	};
 
+	//mode, moon and sun change handler
+	const sunMoonClickHandler = () => {
+		toggleLocalStorage();
+		setIsLight(localStorage.getItem('mode') === 'light');
+	};
+
 	// Form submit handler
 	const handleFormSubmit = e => {
 		const name = nameRef.current.value, email = emailRef.current.value,
@@ -102,24 +136,25 @@ const App = ({location: {pathname}}) => {
 		e.preventDefault();
 		axios({
 			method: "POST",
-			url:"http://localhost:3002/send",
+			url: "http://localhost:3002/send",
 			data: {
 				name,
 				email,
 				subject,
 				message,
 			}
-		}).then((response)=>{
-			if (response.data.msg === 'success'){
+		}).then((response) => {
+			if (response.data.msg === 'success') {
 				createNotification('Message received, thank you.');
 				setClearForm(true);
-			}else if(response.data.msg === 'fail'){
+			} else if (response.data.msg === 'fail') {
 				createNotification(`Hmm... Something went wrong!`);
 			}
 		})
 	};
 
 	useEffect(() => {
+		let themeButtonEffect = themeButton.current.classList;
 		let navTopRefs = navTopRef.current;
 		let navBotRefs = navBotRef.current;
 		let iconListTop = Array.from(navTopIcons.current.childNodes);
@@ -164,9 +199,9 @@ const App = ({location: {pathname}}) => {
 				}
 			}
 		};
+		// viewRemChildrenActive remove active class from the view upon unmounting
 		let viewRemChildrenActive = vc.current;
 		window.addEventListener("devicemotion", motion, false);
-
 
 		for (let i = 0; i < iconListBot.length; i++) {
 			iconListBot[i].classList.remove('active')
@@ -228,9 +263,11 @@ const App = ({location: {pathname}}) => {
 				if ((isMobile() && isPortrait()) || (!isTablet() && pathname === '/contact')) {
 					navTopRef.current.classList.add('flat');
 					navBotRef.current.classList.add('flat');
+					themeButtonEffect.add('contact');
 				} else {
 					navTopRef.current.classList.remove('flat');
 					navBotRef.current.classList.remove('flat');
+					themeButtonEffect.remove('contact');
 				}
 			}, 300)
 		};
@@ -316,13 +353,13 @@ const App = ({location: {pathname}}) => {
 
 			// display mobile shake light mode reminder if being viewed from a phone
 			// display light mode toggle button
-			// todo get back here
 			setTimeout(() => {
-				setLightModeClass('active');
+				themeButtonEffect.add('active');
 				if (pathname === '/' && isMobile()) {
 					createNotification('Shake device to toggle night mode.')
 				}
 			}, 2500);
+			setIsLight(localStorage.getItem('mode') === 'light');
 
 			adjustNavBars();
 			window.addEventListener('resize', adjustNavBars);
@@ -335,14 +372,15 @@ const App = ({location: {pathname}}) => {
 			window.removeEventListener('resize', adjustNavBars);
 			navTopRefs.classList.remove('active');
 			navBotRefs.classList.remove('active');
-			setLightModeClass('');
+			themeButtonEffect.remove('active');
 			setBackgroundActiveClass('active transition');
+			setIsLight(localStorage.getItem('mode') === 'light');
 		}
 	}, [pathname, lastX, lastY, lastZ]);
 
 	return (
 		<>
-			<div className='site-loader dark active'>
+			<div className='site-loader dark active' ref={loaderRef}>
 				<span ref={leftLine} className={`line left`}/>
 				<span ref={rightLine} className={`line right`}/>
 				<span ref={bottomLine} className={`line bottom`}/>
@@ -354,7 +392,11 @@ const App = ({location: {pathname}}) => {
 					navTopIcons={navTopIcons}
 					navBotIcons={navBotIcons}
 				/>
-				<ThemeButton classProps={initLightModeClass}/>
+				<div
+					ref={themeButton} onClick={() => sunMoonClickHandler()}
+					className={`light-mode`}>
+					{isLight ? <Moon className='moon'/> : <Sun className='sun'/>}
+				</div>
 				<div className='dark notification' ref={notificationRef}/>
 				<div className='view-container' ref={vc}>
 					<Switch>
@@ -363,8 +405,10 @@ const App = ({location: {pathname}}) => {
 						<Route path='/skills' render={props => <Skills {...props} lineRef={lineRef}/>}/>
 						<Route path='/works' render={props => <Works {...props} workRef={workRef}/>}/>
 						<Route path='/contact' render={props => <Contact {...props}
-						  nameRef={nameRef} emailRef={emailRef} subjectRef={subjectRef} messageRef={messageRef}
-						  handleSubmit={handleFormSubmit} clearForm={initClearForm}
+						                                                 isLight={isLight}
+						                                                 nameRef={nameRef} emailRef={emailRef}
+						                                                 subjectRef={subjectRef} messageRef={messageRef}
+						                                                 handleSubmit={handleFormSubmit} clearForm={initClearForm}
 						/>}/>
 					</Switch>
 				</div>

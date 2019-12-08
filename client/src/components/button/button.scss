@@ -67,7 +67,6 @@
     }
 
     &-submit {
-      border: 0.1rem solid #421254 !important;
       letter-spacing: unset !important;
       border-radius: 4px !important;
       background-color: transparent;
@@ -75,12 +74,19 @@
       font-weight: 400 !important;
       font-size: $default-font-size-small !important;
 
+      &.dark {
+        border: 0.1rem solid #421254 !important;
+
+        &:hover {
+          background-color: #421254 !important;
+        }
+      }
+
       &::after {
         background-color: #421254;
       }
 
       &:hover{
-        background-color: #421254;
         padding: 4px 12px;
         color: $color-tertiary-light;
       }
@@ -115,6 +121,14 @@
   &:visited {
     cursor: not-allowed !important;
     transition: unset;
+
+    &.dark {
+      border: 0.1rem solid #421254 !important;
+
+      &:hover {
+        background-color: unset !important;
+      }
+    }
 
     &::after {
       background-color: unset;
