@@ -88,6 +88,7 @@ const App = ({location: {pathname}}) => {
 				navTopRef.current.classList.remove('dark');
 				navBotRef.current.classList.remove('dark');
 				loaderRef.current.classList.remove('dark');
+				notificationRef.current.classList.remove('dark');
 				for (let n = 0; n < viewChildrenToggleActive.length; n++) {
 					viewChildrenToggleActive[n].classList.remove('dark');
 				}
@@ -99,6 +100,7 @@ const App = ({location: {pathname}}) => {
 				navTopRef.current.classList.add('dark');
 				navBotRef.current.classList.add('dark');
 				loaderRef.current.classList.add('dark');
+				notificationRef.current.classList.add('dark');
 				for (let n = 0; n < viewChildrenToggleActive.length; n++) {
 					viewChildrenToggleActive[n].classList.add('dark');
 				}
@@ -194,7 +196,7 @@ const App = ({location: {pathname}}) => {
 				}
 
 				if (moveCounter > 20) {
-					alert("SHAKE!!!");
+					sunMoonClickHandler();
 					moveCounter = 0;
 				}
 			}

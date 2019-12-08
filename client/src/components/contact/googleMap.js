@@ -3,7 +3,7 @@ import React, {useEffect, useRef} from 'react';
 import LogoMarker from "../../assets/images/logoMarkerDark.svg";
 
 // Variables
-const mapApiKey = process.env.REACT_APP_MAP_API_KEY;
+const mapApiKey = 'AIzaSyDdXBTcMBFHexWDQh6gZa37ehtDNa1nf2U';
 const myLocation = {
 	lat: 6.6765,
 	lng: 3.2920
