@@ -6,19 +6,19 @@ import '../button/button.scss';
 import './contact-form.scss';
 import '../viewComponents.scss';
 
-const Contact = ({nameRef, emailRef, subjectRef, messageRef, handleSubmit, clearForm, isLight}) => {
+const Contact = ({nameRef, emailRef, messageRef, handleSubmit, clearForm, isLight}) => {
 	const [initName, setName] = useState(''), [initEmail, setEmail] = useState(''),
-		[initSubject, setSubject] = useState(''), [initMessage, setMessage] = useState(''),
-		[initButton, setButton] = useState('disabled'), [initMailVal, setMailVal] = useState('');
+		[initMessage, setMessage] = useState(''), [initButton, setButton] = useState('disabled'),
+		[initMailValidator, setMailValidator] = useState('');
 
 	const emailValidator = emailInput => {
 		let regx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		if (regx.test(emailInput)) {
-			setMailVal('');
+			setMailValidator('');
 			return true;
 		}
 		else {
-			setMailVal('val_error');
+			setMailValidator('val_error');
 			return false;
 		}
 	};
@@ -27,14 +27,13 @@ const Contact = ({nameRef, emailRef, subjectRef, messageRef, handleSubmit, clear
 		if (clearForm) {
 			setName('');
 			setEmail('');
-			setSubject('');
 			setMessage('');
 		}
 
-		if ((initName && initSubject && initMessage && emailValidator(initEmail)) !== '') {
+		if ((initName && initMessage && emailValidator(initEmail)) !== '') {
 			setButton('');
 		} else setButton('disabled');
-	}, [initName, initSubject, initEmail, initMessage, clearForm]);
+	}, [initName, initEmail, initMessage, clearForm]);
 
 	return (
 		<>
@@ -57,7 +56,7 @@ const Contact = ({nameRef, emailRef, subjectRef, messageRef, handleSubmit, clear
 									ref={nameRef}
 									value={initName}
 									onChange={event => setName(event.target.value)}
-									name="name" type="text" className="form__input" id="name" placeholder="Name"
+									name="name" type="text" className="form__input" placeholder="Name"
 									required/>
 								<label htmlFor="name" className="form__label">Name</label>
 							</div>
@@ -67,18 +66,9 @@ const Contact = ({nameRef, emailRef, subjectRef, messageRef, handleSubmit, clear
 									ref={emailRef}
 									value={initEmail}
 									onChange={event => setEmail(event.target.value)}
-									name="email" type="email" id="email" className={`form__input ${initMailVal}`}
+									name="email" type="email" className={`form__input ${initMailValidator}`}
 									placeholder="Email" required/>
 								<label htmlFor="email" className="form__label">Email</label>
-							</div>
-							<div className="form__group">
-								<input
-									ref={subjectRef}
-									value={initSubject}
-									onChange={event => setSubject(event.target.value)}
-									name="subject" type="text" className="form__input" id="subject"
-									placeholder="Subject" required/>
-								<label htmlFor="subject" className="form__label">Subject</label>
 							</div>
 							<div className="form__group">
 						<textarea
@@ -86,7 +76,7 @@ const Contact = ({nameRef, emailRef, subjectRef, messageRef, handleSubmit, clear
 							value={initMessage}
 							onChange={event => setMessage(event.target.value)}
 							name="message"
-							className="form__input" id="message"
+							className="form__input"
 							placeholder="Your Message" required/>
 								<label htmlFor="message" className="form__label">Your Message</label>
 							</div>

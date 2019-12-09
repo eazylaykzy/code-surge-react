@@ -20,7 +20,7 @@
     cursor: pointer;
   }
 
-  &:hover{
+  &:hover {
     background-color: $color-primary;
     padding: 6px 14px;
     color: $color-grey-dark-3;
@@ -61,7 +61,7 @@
         background-color: $color-primary;
       }
 
-      &:hover{
+      &:hover {
         color: $color-tertiary-light;
       }
     }
@@ -86,7 +86,7 @@
         background-color: #421254;
       }
 
-      &:hover{
+      &:hover {
         padding: 4px 12px;
         color: $color-tertiary-light;
       }
@@ -134,10 +134,10 @@
       background-color: unset;
     }
 
-    &:hover{
+    &:hover {
       padding: 4px 12px;;
       color: $color-grey-dark-2;
-      background-color: unset;
+      background-color: unset !important;
     }
   }
 }
@@ -167,7 +167,7 @@
       background-color: $color-primary;
     }
 
-    &:hover{
+    &:hover {
       background-color: $color-secondary-dark;
       color: $color-white;
       cursor: not-allowed;
@@ -236,4 +236,33 @@
   @include respond(phone) {
     text-align: center;
   }
+}
+
+.work-wrapper {
+  &.dark .btn {
+    &,
+    &:link,
+    &:visited {
+      //Change for the <button> element
+      border: .1rem solid $color-main-dark-purple;
+      cursor: pointer;
+    }
+    &--ghost {
+      &-small {
+        background-color: transparent;
+        font-weight: 400 !important;
+        font-size: $default-font-size-small !important;
+
+        &::after {
+          background-color: $color-main-dark-purple;
+        }
+
+        &:hover {
+          color: $color-tertiary-light;
+          background-color: $color-main-dark-purple;
+        }
+      }
+    }
+  }
+
 }

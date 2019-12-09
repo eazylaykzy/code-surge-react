@@ -15,6 +15,7 @@ import './components/viewComponents.scss';
 import './components/navbarAndLoader/navbarAndLoader.scss';
 import {ReactComponent as Sun} from "./assets/images/sun.svg";
 import {ReactComponent as Moon} from "./assets/images/moon.svg";
+import Redirect from "react-router-dom/es/Redirect";
 
 const mobileWidth = 1024;
 
@@ -54,8 +55,8 @@ const App = ({location: {pathname}}) => {
 		aboutRef = useRef(''), lineRef = useRef(''),
 		workRef = useRef(''), notificationRef = useRef(''),
 		nameRef = useRef(''), emailRef = useRef(''),
-		subjectRef = useRef(''), messageRef = useRef(''),
-		loaderRef = useRef(''), themeButton = useRef('');
+		messageRef = useRef(''), loaderRef = useRef(''),
+		themeButton = useRef('');
 
 	// Component States
 	const [initBackgroundActiveClass, setBackgroundActiveClass] = useState(''),
@@ -134,7 +135,7 @@ const App = ({location: {pathname}}) => {
 	// Form submit handler
 	const handleFormSubmit = e => {
 		const name = nameRef.current.value, email = emailRef.current.value,
-			subject = subjectRef.current.value, message = messageRef.current.value;
+			message = messageRef.current.value;
 		e.preventDefault();
 		axios({
 			method: "POST",
@@ -142,7 +143,6 @@ const App = ({location: {pathname}}) => {
 			data: {
 				name,
 				email,
-				subject,
 				message,
 			}
 		}).then((response) => {
@@ -161,7 +161,10 @@ const App = ({location: {pathname}}) => {
 		let navBotRefs = navBotRef.current;
 		let iconListTop = Array.from(navTopIcons.current.childNodes);
 		let iconListBot = Array.from(navBotIcons.current.childNodes);
-// Toggle Light Mode on Device Shake
+		// viewRemChildrenActive remove active class from the view upon unmounting
+		let viewRemChildrenActive = vc.current;
+
+		// Toggle Light Mode on Device Shake
 		let moveCounter = 0;
 		const motion = e => {
 			let acc = e.acceleration;
@@ -197,12 +200,12 @@ const App = ({location: {pathname}}) => {
 
 				if (moveCounter > 20) {
 					sunMoonClickHandler();
+					localStorage.getItem('mode') === 'light' ?
+						createNotification('Light mode on.') : createNotification('Dark mode on.');
 					moveCounter = 0;
 				}
 			}
 		};
-		// viewRemChildrenActive remove active class from the view upon unmounting
-		let viewRemChildrenActive = vc.current;
 		window.addEventListener("devicemotion", motion, false);
 
 		for (let i = 0; i < iconListBot.length; i++) {
@@ -368,7 +371,7 @@ const App = ({location: {pathname}}) => {
 		});
 
 		return () => {
-			updateViewWhenUnmounting(viewRemChildrenActive);
+			updateViewWhenUnmounting(viewRemChildrenActive); // this is not working just yet.
 			window.removeEventListener("devicemotion", motion, false);
 			window.removeEventListener('resize', adjustContentSliders);
 			window.removeEventListener('resize', adjustNavBars);
@@ -409,9 +412,10 @@ const App = ({location: {pathname}}) => {
 						<Route path='/contact' render={props => <Contact {...props}
 						                                                 isLight={isLight}
 						                                                 nameRef={nameRef} emailRef={emailRef}
-						                                                 subjectRef={subjectRef} messageRef={messageRef}
-						                                                 handleSubmit={handleFormSubmit} clearForm={initClearForm}
+						                                                 messageRef={messageRef} handleSubmit={handleFormSubmit}
+						                                                 clearForm={initClearForm}
 						/>}/>
+						<Redirect to="/" />
 					</Switch>
 				</div>
 				<Particles classProps={initBackgroundActiveClass}/>

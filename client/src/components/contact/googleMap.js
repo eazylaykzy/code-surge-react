@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 
-import LogoMarker from "../../assets/images/logoMarkerDark.svg";
+import LogoMarker from "../../assets/images/logoMarker.svg";
 
 // Variables
 const mapApiKey = 'AIzaSyDdXBTcMBFHexWDQh6gZa37ehtDNa1nf2U';

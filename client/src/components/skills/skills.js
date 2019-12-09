@@ -38,17 +38,21 @@ const Skills = ({lineRef}) => {
 						<div className="header-content-body skill-one">
 							<div className="line-left"/>
 							<p className="header body about-one">
-								The core of my skill set largely surrounds the MERN <strong>stack</strong>, to achieve both a clear and
-								dynamic user experience. I also have some experience with mobile integration (Android and iOS).
-								Strengthening my grasp of the mobile app development space is one of my primary goals for the near
-								future.
+								The main area of my expertise is backend and frontend development and
+								everything related to this side of the web. HTML, CSS, JS (ES5, ES6),
+								building small & medium Web Apps, <strong>React.js</strong>, <strong>Node</strong>,
+								<strong>Go(Golang)</strong>, and building
+								features rich content, animations, and just coding layouts.
 							</p>
 						</div>
-					</div>
-				</div>
-				<div className='skill-container'>
-					<div className='skill-wrap'>
-						hey
+						<div className="header-content-body gap skill-two">
+							<div className="line-left"/>
+							<p className="header body about-two gap">
+								As of late, I've also been dabbling in some newer technologies like <strong>Blockchain</strong>
+								and <strong>React Native</strong>. More than anything, I am always eager to learn and adapt to
+								the ever-changing facets of the web.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

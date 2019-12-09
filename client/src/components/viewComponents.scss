@@ -268,7 +268,7 @@ body {
 
   &.contact {
     left: 9.3vw;
-    top: 16vh;
+    top: 24vh;
     //width: 32vw;
     transform: none;
     -webkit-transform: none;
@@ -316,7 +316,7 @@ body {
 }
 
 .header-title-wrap {
-  padding-bottom: 3vh;
+  padding-bottom: 2vh;
   display: inline-flex;
   position: relative;
   overflow: hidden;
@@ -391,7 +391,7 @@ body {
 }
 
 .sun {
-  fill: $color-main;
+  fill: #C4C4C6;
   //opacity: 0; Get back here Todo
 }
 
@@ -628,7 +628,7 @@ figure {
 
 .contact-form {
   width: 30vw;
-  padding-top: 3vh;
+  padding-top: 1vh;
 
   .submit-wrapper {
     display: flex;
@@ -645,115 +645,6 @@ figure {
       }
     }
   }
-
-  /*form {
-    > div {
-      cursor: text;
-      padding: 0;
-      margin-bottom: 2%;
-      clear: both;
-      position: relative;
-      > input, textarea {
-        margin-left: 8vw;
-        font: 600 14px 'Khula', sans-serif;
-        width: 100%;
-        //border: 0;
-        background-color: #f7f7f7;
-        height: 50px;
-        color: $color-main;
-        //padding: 0 20px;
-        box-sizing: border-box;
-        transition: opacity $c-b-d .5s;
-        &.submit-button {
-          transition: transform $c-b-d 1s .3s, color ease-in-out .1s;
-          text-align: center;
-          background-color: $color-main;
-          width: auto;
-          height: auto;
-          color: #f7f7f7;
-          border-radius: 4px;
-          float: right;
-          margin-right: -8vw;
-          padding: 0.7vh .5vw 0.5vh 0.7vw;
-          letter-spacing: .1vw;
-          cursor: pointer;
-          -webkit-appearance: none;
-          &:hover {
-            color: #57a3e4;
-          }
-          &.error {
-            cursor: not-allowed;
-            &:hover {
-              color: #f7f7f7;
-            }
-          }
-        }
-      }
-      &.short {
-        width: 49%;
-        float: left;
-        clear: none;
-        margin-left: 2%;
-        > input {
-          transition: transform $c-b-d 1s .1s;
-        }
-        &:first-child {
-          margin-left: 0;
-          > input {
-            transition: transform $c-b-d 1s;
-          }
-        }
-        > label {
-          &.focus:after, &.focus:before {
-            width: 14.7vw;
-          }
-          // 49% of 30vw
-          &.error:after {
-            width: 14.7vw;
-          }
-        }
-      }
-      > textarea {
-        height: 180px;
-        min-height: 180px;
-        max-height: 300px;
-        padding-top: 20px;
-        resize: vertical;
-        transition: transform $c-b-d 1s .2s;
-        vertical-align: top;
-      }
-      > label {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        &:after, &:before {
-          position: absolute;
-          display: inline-block;
-          content: '';
-          height: 0;
-          width: 0;
-        }
-        &:after {
-          border-top: 2px solid #57a3e4;
-          transition: width .3s .2s;
-          z-index: 2;
-        }
-        &:before {
-          border-top: 2px solid #1D71B8;
-          transition: width .3s;
-          z-index: 1;
-        }
-        &.focus:after, &.focus:before {
-          width: 30vw;
-        }
-        &.error:after {
-          border-top: 2px solid #F95B3E;
-          z-index: 3;
-          width: 30vw;
-        }
-      }
-    }
-  }*/
 }
 
 .view.active-f .contact-form > form > div {
@@ -789,7 +680,7 @@ figure {
   border: 0.1rem solid #421254 !important;
 
   &:hover {
-    background-color: #421254 !important;
+    background-color: #421254;
   }
 }
 
@@ -1342,13 +1233,14 @@ figure {
 
     input, textarea {
       font-size: 14px !important;
-      padding-left: 19px !important;
+      width: 96%;
     }
 
     textarea {
-      height: 24vh !important;
-      min-height: 24vh !important;
+      height: 22vh !important;
+      min-height: 20vh !important;
       padding-top: 12px !important;
+      width: 98%;
     }
 
     .short label {
@@ -1530,12 +1422,14 @@ figure {
       input, textarea {
         font-size: 14px !important;
         padding-left: 19px !important;
+        width: 96%;
       }
 
       textarea {
         height: 36vh !important;
         min-height: 36vh !important;
         padding-top: 12px !important;
+        width: 98%;
       }
 
       div {
@@ -1701,7 +1595,7 @@ figure {
           .work-panel-cover {
             width: 110vw !important;
             right: -110vw !important;
-            border-bottom-width: 55vw;
+            border-bottom-width: 63vw;
             border-left-width: 20vw;
           }
 
@@ -1711,7 +1605,7 @@ figure {
 
           &:hover {
             .work-panel-cover {
-              transform: none !important;
+              transform: translate(-110vw) !important;
             }
           }
 
