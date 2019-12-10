@@ -135,10 +135,15 @@ const App = ({location: {pathname}}) => {
 	const handleFormSubmit = e => {
 		const name = nameRef.current.value, email = emailRef.current.value,
 			message = messageRef.current.value;
+
+		let url;
+		process.env.NODE_ENV === 'development' ? url = 'http://localhost:3002/contact'
+			: url = 'https://localhost:3002/contact';
+
 		e.preventDefault();
 		axios({
 			method: "POST",
-			url: `localhost:3002/contact`,
+			url: url,
 			data: {
 				name,
 				email,
