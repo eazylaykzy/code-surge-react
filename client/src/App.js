@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {Route, Switch, withRouter} from "react-router-dom";
+import {Route, Switch, withRouter, Redirect} from "react-router-dom";
 import axios from 'axios';
 
 import About from "./components/about/about";
@@ -15,7 +15,6 @@ import './components/viewComponents.scss';
 import './components/navbarAndLoader/navbarAndLoader.scss';
 import {ReactComponent as Sun} from "./assets/images/sun.svg";
 import {ReactComponent as Moon} from "./assets/images/moon.svg";
-import Redirect from "react-router-dom/es/Redirect";
 
 const mobileWidth = 1024;
 
@@ -149,6 +148,7 @@ const App = ({location: {pathname}}) => {
 			if (response.data.msg === 'success') {
 				createNotification('Message received, thank you.');
 				setClearForm(true);
+				setTimeout(() => {setClearForm(false)})
 			} else if (response.data.msg === 'fail') {
 				createNotification(`Hmm... Something went wrong!`);
 			}

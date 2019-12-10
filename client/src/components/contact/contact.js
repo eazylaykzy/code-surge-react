@@ -16,8 +16,7 @@ const Contact = ({nameRef, emailRef, messageRef, handleSubmit, clearForm, isLigh
 		if (regx.test(emailInput)) {
 			setMailValidator('');
 			return true;
-		}
-		else {
+		} else {
 			setMailValidator('val_error');
 			return false;
 		}
@@ -71,16 +70,16 @@ const Contact = ({nameRef, emailRef, messageRef, handleSubmit, clearForm, isLigh
 								<label htmlFor="email" className="form__label">Email</label>
 							</div>
 							<div className="form__group">
-						<textarea
-							ref={messageRef}
-							value={initMessage}
-							onChange={event => setMessage(event.target.value)}
-							name="message"
-							className="form__input"
-							placeholder="Your Message" required/>
+								<textarea
+									ref={messageRef}
+									value={initMessage}
+									onChange={event => setMessage(event.target.value)}
+									name="message"
+									className="form__input"
+									placeholder="Your Message" required/>
 								<label htmlFor="message" className="form__label">Your Message</label>
 							</div>
-							<button className={`btn btn--ghost-submit ${initButton}`} type="submit">Send</button>
+							<button className={`btn btn--ghost-submit ${initButton}`} type='submit'>Send</button>
 						</form>
 					</div>
 				</div>
