@@ -136,14 +136,10 @@ const App = ({location: {pathname}}) => {
 		const name = nameRef.current.value, email = emailRef.current.value,
 			message = messageRef.current.value;
 
-		let url;
-		process.env.NODE_ENV === 'development' ? url = 'http://localhost:3002/send'
-			: url = 'https://localhost:3002/send';
-
 		e.preventDefault();
 		axios({
 			method: "POST",
-			url: url,
+			url: 'http://localhost:3002/send',
 			data: {
 				name,
 				email,
