@@ -21,7 +21,7 @@ transporter.verify((error, success) => {
   }
 });
 
-router.post('/contact', (req, res, next) => {
+router.post('/send', (req, res, next) => {
   var name = req.body.name;
   var email = req.body.email;
   var subject = req.body.subject;

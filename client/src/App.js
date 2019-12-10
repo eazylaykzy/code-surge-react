@@ -137,8 +137,8 @@ const App = ({location: {pathname}}) => {
 			message = messageRef.current.value;
 
 		let url;
-		process.env.NODE_ENV === 'development' ? url = 'http://localhost:3002/contact'
-			: url = 'https://localhost:3002/contact';
+		process.env.NODE_ENV === 'development' ? url = 'http://localhost:3002/send'
+			: url = 'https://localhost:3002/send';
 
 		e.preventDefault();
 		axios({
