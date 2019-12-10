@@ -138,7 +138,7 @@ const App = ({location: {pathname}}) => {
 
 		let url;
 		process.env.NODE_ENV === 'development' ? url = 'http://localhost:3002/send'
-			: url = 'https://localhost:3002/send';
+			: url = 'https://codesurge.herokuapp.com/send';
 
 		e.preventDefault();
 		axios({
