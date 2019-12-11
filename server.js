@@ -65,9 +65,9 @@ app.post('/send', (req, res) => {
 				msg: 'success'
 			})
 		}
-	});
+	});/*
 	res.writeHead(301, { Location: 'index.html' });
-	res.end();
+	res.end();*/
 });
 
 
@@ -88,5 +88,3 @@ app.use(function(err, req, res, next) {
 	res.status(err.status || 500);
 	res.render('error');
 });
-
-module.exports = app;
