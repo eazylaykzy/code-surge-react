@@ -138,12 +138,12 @@ const App = ({location: {pathname}}) => {
 
 		e.preventDefault();
 		axios({
+			url: 'https://codesurge.herokuapp.com',
 			method: "POST",
-			url: 'http://localhost:3002/send',
 			data: {
 				name,
 				email,
-				message,
+				message
 			}
 		}).then((response) => {
 			if (response.data.msg === 'success') {
