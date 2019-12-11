@@ -138,7 +138,7 @@ const App = ({location: {pathname}}) => {
 
 		e.preventDefault();
 		axios({
-			url: 'http://localhost:5000/send',
+			url: 'https://codesurge.herokuapp.com',
 			method: "POST",
 			data: {
 				name,
