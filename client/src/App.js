@@ -138,7 +138,7 @@ const App = ({location: {pathname}}) => {
 
 		e.preventDefault();
 		axios({
-			url: '/send',
+			url: 'send',
 			method: "POST",
 			data: {
 				name,

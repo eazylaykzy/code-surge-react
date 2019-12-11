@@ -59,7 +59,8 @@ app.post('/send', (req, res) => {
 		if (err) {
 			console.log(err);
 			res.json({
-				msg: 'fail'
+				msg: 'fail',
+				err
 			})
 		} else {
 			res.json({
