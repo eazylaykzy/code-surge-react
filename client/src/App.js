@@ -139,7 +139,7 @@ const App = ({location: {pathname}}) => {
 		e.preventDefault();
 		axios({
 			method: "POST",
-			url: 'send',
+			url: 'http://localhost:3002/send',
 			data: {
 				name,
 				email,
