@@ -145,12 +145,13 @@ const App = ({location: {pathname}}) => {
 				email,
 				message
 			}
-		}).then((response) => {
-			if (response.data.msg === 'success') {
+		}).then(({data}) => {
+			if (data.msg === 'success') {
 				createNotification('Message received, thank you.');
 				setClearForm(true);
 				setTimeout(() => {setClearForm(false)})
-			} else if (response.data.msg === 'fail') {
+			} else if (data.msg === 'fail') {
+				console.log(data);
 				createNotification(`Hmm... Something went wrong!`);
 			}
 		})
