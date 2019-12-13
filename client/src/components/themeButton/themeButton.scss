@@ -1,0 +1,73 @@
+//vars
+$color-blue: #57a3e4;
+$color-main: #4c4f65;
+
+.light-mode {
+  height: 5vw;
+  width: 5vw;
+  z-index: 900;
+  cursor: pointer;
+  position: absolute;
+  right: .6vw;
+  top: .6vw;
+  text-align: left;
+  display: flex;
+  transition: opacity ease-in-out .5s;
+  &:focus svg {
+    fill: $color-blue;
+  }
+  &.active {
+    opacity: 1;
+  }
+  &.contact {
+    display: block;
+    left: 49vw;
+    top: 16vh;
+  }
+}
+
+.light-mode svg {
+  height: 5vw;
+  width: 5vw;
+  position: absolute;
+  text-align: center;
+  transition: all ease-in .2s;
+}
+
+.sun {
+  fill: #b5b5b5;
+}
+
+.sun.dark {
+  fill: #C4C4C6;
+}
+
+.moon {
+  fill: $color-main;
+}
+
+.moon.dark {
+  fill: #C4C4C6;
+}
+
+// Mobile Styling
+
+@media only screen and (max-width: 700px) {
+  .light-mode {
+    right: unset;
+    top: 8vw;
+    left: 4vw;
+  }
+
+  .light-mode svg {
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+    text-align: center;
+    transition: all ease-in .2s;
+  }
+
+  .moon {
+    fill: #C4C4C6;
+  }
+}

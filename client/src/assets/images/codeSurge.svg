@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 330 530" style="enable-background:new 0 0 330 530;" xml:space="preserve">
+<style type="text/css">
+	.svg {
+    display: inline-block;
+    height: 320px;
+    width: 200px;
+    line-height: 200px;
+    text-align: center;
+    background-color: #FFF;
+}
+
+#svg {
+    display: inline-block;
+    vertical-align: middle;
+    fill: #0057B8;
+}
+#svg path:nth-child(1) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+#svg path:nth-child(1):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(2) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+#svg path:nth-child(2):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(3) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+#svg path:nth-child(3):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(4) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+#svg path:nth-child(4):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(5) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+#svg path:nth-child(5):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(6) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+#svg path:nth-child(6):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(7) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+#svg path:nth-child(7):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(8) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+#svg path:nth-child(8):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(9) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+#svg path:nth-child(9):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(10) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+#svg path:nth-child(10):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(11) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1.1s;
+    animation-delay: 1.1s;
+}
+#svg path:nth-child(11):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(12) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+#svg path:nth-child(12):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(13) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+#svg path:nth-child(13):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(14) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+#svg path:nth-child(14):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(15) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+#svg path:nth-child(15):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(16) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+#svg path:nth-child(16):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(17) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1.7s;
+    animation-delay: 1.7s;
+}
+#svg path:nth-child(17):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(18) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+#svg path:nth-child(18):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(19) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 1.9s;
+    animation-delay: 1.9s;
+}
+#svg path:nth-child(19):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(20) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+#svg path:nth-child(20):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(21) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2.1s;
+    animation-delay: 2.1s;
+}
+#svg path:nth-child(21):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(22) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+}
+#svg path:nth-child(22):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(23) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2.3s;
+    animation-delay: 2.3s;
+}
+#svg path:nth-child(23):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(24) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+#svg path:nth-child(24):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(25) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+#svg path:nth-child(25):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(26) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2.6s;
+    animation-delay: 2.6s;
+}
+#svg path:nth-child(26):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(27) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2.7s;
+    animation-delay: 2.7s;
+}
+#svg path:nth-child(27):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(28) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2.8s;
+    animation-delay: 2.8s;
+}
+#svg path:nth-child(28):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(29) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 2.9s;
+    animation-delay: 2.9s;
+}
+#svg path:nth-child(29):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(30) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+#svg path:nth-child(30):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(31) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3.1s;
+    animation-delay: 3.1s;
+}
+#svg path:nth-child(31):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(32) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3.2s;
+    animation-delay: 3.2s;
+}
+#svg path:nth-child(32):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(33) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3.3s;
+    animation-delay: 3.3s;
+}
+#svg path:nth-child(33):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(34) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3.4s;
+    animation-delay: 3.4s;
+}
+#svg path:nth-child(34):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(35) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+}
+#svg path:nth-child(35):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(36) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3.6s;
+    animation-delay: 3.6s;
+}
+#svg path:nth-child(36):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(37) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3.7s;
+    animation-delay: 3.7s;
+}
+#svg path:nth-child(37):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(38) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3.8s;
+    animation-delay: 3.8s;
+}
+#svg path:nth-child(38):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(39) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 3.9s;
+    animation-delay: 3.9s;
+}
+#svg path:nth-child(39):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(40) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+#svg path:nth-child(40):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(41) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4.1s;
+    animation-delay: 4.1s;
+}
+#svg path:nth-child(41):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(42) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4.2s;
+    animation-delay: 4.2s;
+}
+#svg path:nth-child(42):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(43) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4.3s;
+    animation-delay: 4.3s;
+}
+#svg path:nth-child(43):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(44) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4.4s;
+    animation-delay: 4.4s;
+}
+#svg path:nth-child(44):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(45) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4.5s;
+    animation-delay: 4.5s;
+}
+#svg path:nth-child(45):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(46) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4.6s;
+    animation-delay: 4.6s;
+}
+#svg path:nth-child(46):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(47) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4.7s;
+    animation-delay: 4.7s;
+}
+#svg path:nth-child(47):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(48) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4.8s;
+    animation-delay: 4.8s;
+}
+#svg path:nth-child(48):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(49) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 4.9s;
+    animation-delay: 4.9s;
+}
+#svg path:nth-child(49):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(50) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+#svg path:nth-child(50):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(51) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5.1s;
+    animation-delay: 5.1s;
+}
+#svg path:nth-child(51):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(52) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5.2s;
+    animation-delay: 5.2s;
+}
+#svg path:nth-child(52):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(53) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5.3s;
+    animation-delay: 5.3s;
+}
+#svg path:nth-child(53):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(54) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5.4s;
+    animation-delay: 5.4s;
+}
+#svg path:nth-child(54):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(55) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5.5s;
+    animation-delay: 5.5s;
+}
+#svg path:nth-child(55):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(56) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5.6s;
+    animation-delay: 5.6s;
+}
+#svg path:nth-child(56):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(57) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5.7s;
+    animation-delay: 5.7s;
+}
+#svg path:nth-child(57):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(58) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5.8s;
+    animation-delay: 5.8s;
+}
+#svg path:nth-child(58):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(59) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 5.9s;
+    animation-delay: 5.9s;
+}
+#svg path:nth-child(59):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(60) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+#svg path:nth-child(60):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(61) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6.1s;
+    animation-delay: 6.1s;
+}
+#svg path:nth-child(61):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(62) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6.2s;
+    animation-delay: 6.2s;
+}
+#svg path:nth-child(62):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(63) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6.3s;
+    animation-delay: 6.3s;
+}
+#svg path:nth-child(63):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(64) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6.4s;
+    animation-delay: 6.4s;
+}
+#svg path:nth-child(64):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(65) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6.5s;
+    animation-delay: 6.5s;
+}
+#svg path:nth-child(65):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(66) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6.6s;
+    animation-delay: 6.6s;
+}
+#svg path:nth-child(66):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(67) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6.7s;
+    animation-delay: 6.7s;
+}
+#svg path:nth-child(67):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(68) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6.8s;
+    animation-delay: 6.8s;
+}
+#svg path:nth-child(68):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(69) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 6.9s;
+    animation-delay: 6.9s;
+}
+#svg path:nth-child(69):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(70) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+}
+#svg path:nth-child(70):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(71) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7.1s;
+    animation-delay: 7.1s;
+}
+#svg path:nth-child(71):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(72) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7.2s;
+    animation-delay: 7.2s;
+}
+#svg path:nth-child(72):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(73) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7.3s;
+    animation-delay: 7.3s;
+}
+#svg path:nth-child(73):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(74) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7.4s;
+    animation-delay: 7.4s;
+}
+#svg path:nth-child(74):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(75) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7.5s;
+    animation-delay: 7.5s;
+}
+#svg path:nth-child(75):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(76) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7.6s;
+    animation-delay: 7.6s;
+}
+#svg path:nth-child(76):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(77) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7.7s;
+    animation-delay: 7.7s;
+}
+#svg path:nth-child(77):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(78) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7.8s;
+    animation-delay: 7.8s;
+}
+#svg path:nth-child(78):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(79) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 7.9s;
+    animation-delay: 7.9s;
+}
+#svg path:nth-child(79):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(80) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+}
+#svg path:nth-child(80):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(81) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8.1s;
+    animation-delay: 8.1s;
+}
+#svg path:nth-child(81):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(82) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8.2s;
+    animation-delay: 8.2s;
+}
+#svg path:nth-child(82):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(83) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8.3s;
+    animation-delay: 8.3s;
+}
+#svg path:nth-child(83):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(84) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8.4s;
+    animation-delay: 8.4s;
+}
+#svg path:nth-child(84):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(85) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8.5s;
+    animation-delay: 8.5s;
+}
+#svg path:nth-child(85):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(86) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8.6s;
+    animation-delay: 8.6s;
+}
+#svg path:nth-child(86):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(87) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8.7s;
+    animation-delay: 8.7s;
+}
+#svg path:nth-child(87):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(88) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8.8s;
+    animation-delay: 8.8s;
+}
+#svg path:nth-child(88):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(89) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 8.9s;
+    animation-delay: 8.9s;
+}
+#svg path:nth-child(89):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(90) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9s;
+    animation-delay: 9s;
+}
+#svg path:nth-child(90):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(91) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9.1s;
+    animation-delay: 9.1s;
+}
+#svg path:nth-child(91):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(92) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9.2s;
+    animation-delay: 9.2s;
+}
+#svg path:nth-child(92):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(93) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9.3s;
+    animation-delay: 9.3s;
+}
+#svg path:nth-child(93):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(94) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9.4s;
+    animation-delay: 9.4s;
+}
+#svg path:nth-child(94):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(95) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9.5s;
+    animation-delay: 9.5s;
+}
+#svg path:nth-child(95):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(96) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9.6s;
+    animation-delay: 9.6s;
+}
+#svg path:nth-child(96):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(97) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9.7s;
+    animation-delay: 9.7s;
+}
+#svg path:nth-child(97):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(98) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9.8s;
+    animation-delay: 9.8s;
+}
+#svg path:nth-child(98):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(99) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 9.9s;
+    animation-delay: 9.9s;
+}
+#svg path:nth-child(99):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(100) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+#svg path:nth-child(100):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(101) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10.1s;
+    animation-delay: 10.1s;
+}
+#svg path:nth-child(101):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(102) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10.2s;
+    animation-delay: 10.2s;
+}
+#svg path:nth-child(102):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(103) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10.3s;
+    animation-delay: 10.3s;
+}
+#svg path:nth-child(103):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(104) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10.4s;
+    animation-delay: 10.4s;
+}
+#svg path:nth-child(104):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(105) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10.5s;
+    animation-delay: 10.5s;
+}
+#svg path:nth-child(105):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(106) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10.6s;
+    animation-delay: 10.6s;
+}
+#svg path:nth-child(106):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(107) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10.7s;
+    animation-delay: 10.7s;
+}
+#svg path:nth-child(107):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(108) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10.8s;
+    animation-delay: 10.8s;
+}
+#svg path:nth-child(108):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(109) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 10.9s;
+    animation-delay: 10.9s;
+}
+#svg path:nth-child(109):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(110) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11s;
+    animation-delay: 11s;
+}
+#svg path:nth-child(110):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(111) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11.1s;
+    animation-delay: 11.1s;
+}
+#svg path:nth-child(111):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(112) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11.2s;
+    animation-delay: 11.2s;
+}
+#svg path:nth-child(112):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(113) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11.3s;
+    animation-delay: 11.3s;
+}
+#svg path:nth-child(113):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(114) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11.4s;
+    animation-delay: 11.4s;
+}
+#svg path:nth-child(114):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(115) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11.5s;
+    animation-delay: 11.5s;
+}
+#svg path:nth-child(115):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(116) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11.6s;
+    animation-delay: 11.6s;
+}
+#svg path:nth-child(116):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(117) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11.7s;
+    animation-delay: 11.7s;
+}
+#svg path:nth-child(117):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(118) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11.8s;
+    animation-delay: 11.8s;
+}
+#svg path:nth-child(118):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(119) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 11.9s;
+    animation-delay: 11.9s;
+}
+#svg path:nth-child(119):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+#svg path:nth-child(120) {
+    -webkit-animation: pweek 12s linear infinite;
+    animation: pweek 12s linear infinite;
+    -webkit-animation-delay: 12s;
+    animation-delay: 12s;
+}
+#svg path:nth-child(120):hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@-webkit-keyframes pweek {
+    0% {
+        fill: #0057B8;
+    }
+    20% {
+        fill: #F11E4A;
+    }
+    40% {
+        fill: #F8A527;
+    }
+    60% {
+        fill: #266D7F;
+    }
+    80% {
+        fill: #82A;
+    }
+    100% {
+        fill: #0057B8;
+    }
+}
+
+@keyframes pweek {
+    0% {
+        fill: #0057B8;
+    }
+    20% {
+        fill: #F11E4A;
+    }
+    40% {
+        fill: #F8A527;
+    }
+    60% {
+        fill: #266D7F;
+    }
+    80% {
+        fill: #82A;
+    }
+    100% {
+        fill: #0057B8;
+    }
+}
+
+	.st0{fill:#0057B8;fill-opacity:0.85;}
+	.st1{fill:#0057B8;fill-opacity:0.7;}
+	.st2{fill:#0057B8;fill-opacity:0.6;}
+	.st3{fill:#0057B8;fill-opacity:0.5;}
+	.st4{fill:#0057B8;fill-opacity:0.9;}
+	.st5{fill:#0057B8;}
+</style>
+<path class="st0" d="M285.5,350v-31.6l27.4,15.8L285.5,350"/>
+<path class="st1" d="M313.3,367.1v-31.6l-27.4,15.8L313.3,367.1"/>
+<path class="st0" d="M285.5,384v-31.6l27.4,15.8L285.5,384"/>
+<path class="st1" d="M313.3,401.1v-31.6l-27.4,15.8L313.3,401.1"/>
+<path class="st0" d="M285.5,418v-31.6l27.4,15.8L285.5,418"/>
+<path class="st1" d="M313.3,434.8v-31.6L285.9,419L313.3,434.8"/>
+<path class="st2" d="M284.5,450.7v-31.6l27.4,15.8L284.5,450.7"/>
+<path class="st3" d="M283.2,450.7v-31.6l-27.4,15.8L283.2,450.7"/>
+<path class="st2" d="M255.5,467.7v-31.6l27.4,15.8L255.5,467.7"/>
+<path class="st3" d="M254.2,467.7v-31.6l-27.4,15.8L254.2,467.7"/>
+<path class="st2" d="M226.5,484.7v-31.6l27.4,15.8L226.5,484.7"/>
+<path class="st3" d="M225.2,484.7v-31.6l-27.4,15.8L225.2,484.7"/>
+<path class="st2" d="M197.5,501.7v-31.6l27.4,15.8L197.5,501.7"/>
+<path class="st3" d="M196.2,501.7v-31.6l-27.4,15.8L196.2,501.7"/>
+<path class="st2" d="M168.2,518.6V487l27.4,15.8L168.2,518.6"/>
+<path class="st3" d="M167,518.6V487l-27.4,15.8L167,518.6"/>
+<path class="st1" d="M139,501.7v-31.6l27.4,15.8L139,501.7"/>
+<path class="st3" d="M138,501.6V470l-27.4,15.8L138,501.6"/>
+<path class="st1" d="M110,484.7v-31.6l27.4,15.8L110,484.7"/>
+<path class="st3" d="M109,484.6V453l-27.4,15.8L109,484.6"/>
+<path class="st1" d="M81,467.7v-31.6l27.4,15.8L81,467.7"/>
+<path class="st3" d="M80,467.6V436l-27.4,15.8L80,467.6"/>
+<path class="st1" d="M52,450.7v-31.6l27.4,15.8L52,450.7"/>
+<path class="st1" d="M50.8,450.7v-31.6l-27.4,15.8L50.8,450.7"/>
+<path class="st1" d="M22.8,433.9v-31.6l27.4,15.8L22.8,433.9"/>
+<path class="st3" d="M50.8,417v-31.6l-27.4,15.8L50.8,417"/>
+<path class="st1" d="M22.8,400.1v-31.6l27.4,15.8L22.8,400.1"/>
+<path class="st2" d="M50.8,383.3v-31.6l-27.4,15.8L50.8,383.3"/>
+<path class="st1" d="M22.8,366.9v-31.6l27.4,15.8L22.8,366.9"/>
+<path class="st3" d="M50.8,350v-31.6l-27.4,15.8L50.8,350"/>
+<path class="st1" d="M22.8,332.1v-31.6l27.4,15.8L22.8,332.1"/>
+<path class="st2" d="M50.8,315.3v-31.6l-27.4,15.8L50.8,315.3"/>
+<path class="st1" d="M22.8,298.9v-31.6l27.4,15.8L22.8,298.9"/>
+<path class="st3" d="M50.8,282v-31.6l-27.4,15.8L50.8,282"/>
+<path class="st1" d="M22.8,265.1v-31.6l27.4,15.8L22.8,265.1"/>
+<path class="st3" d="M50.8,248v-31.6l-27.4,15.8L50.8,248"/>
+<path class="st1" d="M22.8,231.1v-31.6l27.4,15.8L22.8,231.1"/>
+<path class="st2" d="M50.8,214.3v-31.6l-27.4,15.8L50.8,214.3"/>
+<path class="st1" d="M22.8,197.9v-31.6l27.4,15.8L22.8,197.9"/>
+<path class="st3" d="M50.8,181v-31.6l-27.4,15.8L50.8,181"/>
+<path class="st1" d="M22.8,164.1v-31.6l27.4,15.8L22.8,164.1"/>
+<path class="st3" d="M50.8,147v-31.6l-27.4,15.8L50.8,147"/>
+<path class="st1" d="M22.8,130.1V98.5l27.4,15.8L22.8,130.1"/>
+<path class="st2" d="M50.8,113.3V81.7L23.5,97.5L50.8,113.3"/>
+<path class="st0" d="M52,113.3V81.7l27.4,15.8L52,113.3"/>
+<path class="st4" d="M80,96.4V64.8L52.6,80.6L80,96.4"/>
+<path class="st0" d="M81,96.3V64.7l27.4,15.8L81,96.3"/>
+<path class="st4" d="M109,79.4V47.8L81.6,63.6L109,79.4"/>
+<path class="st0" d="M110,79.3V47.7l27.4,15.8L110,79.3"/>
+<path class="st4" d="M138,62.4V30.8l-27.4,15.8L138,62.4"/>
+<path class="st0" d="M139,62.3V30.7l27.4,15.8L139,62.3"/>
+<path class="st4" d="M167,45.4V13.8l-27.4,15.8L167,45.4"/>
+<path class="st5" d="M168.2,45.4V13.8l27.4,15.8L168.2,45.4"/>
+<path class="st4" d="M196.2,62.3V30.7l-27.4,15.8L196.2,62.3"/>
+<path class="st5" d="M197.5,62.3V30.6l27.4,15.8L197.5,62.3"/>
+<path class="st4" d="M225.2,79.3V47.7l-27.4,15.8L225.2,79.3"/>
+<path class="st5" d="M226.5,79.3V47.6l27.4,15.8L226.5,79.3"/>
+<path class="st4" d="M254.2,96.3V64.7l-27.4,15.8L254.2,96.3"/>
+<path class="st5" d="M255.5,96.3V64.6l27.4,15.8L255.5,96.3"/>
+<path class="st4" d="M283.2,113.3V81.7l-27.4,15.8L283.2,113.3"/>
+<path class="st5" d="M284.5,113.3V81.6l27.4,15.8L284.5,113.3"/>
+<path class="st3" d="M312.8,130V98.3l-27.4,15.8L312.8,130"/>
+<path class="st1" d="M284.8,147.1v-31.6l27.4,15.8L284.8,147.1"/>
+<path class="st3" d="M312.8,164v-31.6l-27.4,15.8L312.8,164"/>
+<path class="st1" d="M284.8,180.9v-31.6l27.4,15.8L284.8,180.9"/>
+<path class="st2" d="M312.8,197.3v-31.6l-27.4,15.8L312.8,197.3"/>
+<path class="st0" d="M284,214.3v-31.6l27.4,15.8L284,214.3"/>
+<path class="st4" d="M283,214.4v-31.6l-27.4,15.8L283,214.4"/>
+<path class="st0" d="M255,231.3v-31.6l27.4,15.8L255,231.3"/>
+<path class="st4" d="M254,231.4v-31.6l-27.4,15.8L254,231.4"/>
+<path class="st1" d="M226.8,214.1v-31.6l27.4,15.8L226.8,214.1"/>
+<path class="st3" d="M254.8,197v-31.6l-27.4,15.8L254.8,197"/>
+<path class="st1" d="M226.8,180.1v-31.6l27.4,15.8L226.8,180.1"/>
+<path class="st2" d="M254.8,163.3v-31.6l-27.4,15.8L254.8,163.3"/>
+<path class="st5" d="M227.5,146.3v-31.6l27.4,15.8L227.5,146.3"/>
+<path class="st4" d="M226.2,146.3v-31.6l-27.4,15.8L226.2,146.3"/>
+<path class="st5" d="M198.5,129.3V97.6l27.4,15.8L198.5,129.3"/>
+<path class="st4" d="M197.2,129.3V97.7l-27.4,15.8L197.2,129.3"/>
+<path class="st5" d="M169.2,112.4V80.8l27.4,15.8L169.2,112.4"/>
+<path class="st4" d="M168,112.4V80.8l-27.4,15.8L168,112.4"/>
+<path class="st0" d="M140,129.3V97.7l27.4,15.8L140,129.3"/>
+<path class="st4" d="M139,129.4V97.8l-27.4,15.8L139,129.4"/>
+<path class="st0" d="M111,146.3v-31.6l27.4,15.8L111,146.3"/>
+<path class="st4" d="M110,146.4v-31.6l-27.4,15.8L110,146.4"/>
+<path class="st1" d="M81.8,163.1v-31.6l27.4,15.8L81.8,163.1"/>
+<path class="st3" d="M109.8,180v-31.6l-27.4,15.8L109.8,180"/>
+<path class="st1" d="M81.8,196.9v-31.6l27.4,15.8L81.8,196.9"/>
+<path class="st2" d="M109.8,213.3v-31.6l-27.4,15.8L109.8,213.3"/>
+<path class="st1" d="M81.8,230.1v-31.6l27.4,15.8L81.8,230.1"/>
+<path class="st1" d="M109.8,246.7v-31.6l-27.4,15.8L109.8,246.7"/>
+<path class="st1" d="M111,246.7v-31.6l27.4,15.8L111,246.7"/>
+<path class="st3" d="M139,263.6V232l-27.4,15.8L139,263.6"/>
+<path class="st1" d="M140,263.7v-31.6l27.4,15.8L140,263.7"/>
+<path class="st3" d="M168,280.6V249l-27.4,15.8L168,280.6"/>
+<path class="st1" d="M169,280.7v-31.6l27.4,15.8L169,280.7"/>
+<path class="st3" d="M197,297.6V266l-27.4,15.8L197,297.6"/>
+<path class="st1" d="M198,297.7v-31.6l27.4,15.8L198,297.7"/>
+<path class="st3" d="M226,314.6V283l-27.4,15.8L226,314.6"/>
+<path class="st1" d="M228,314.7v-31.6l27.4,15.8L228,314.7"/>
+<path class="st3" d="M255.8,332v-31.6l-27.4,15.8L255.8,332"/>
+<path class="st1" d="M227.8,349.1v-31.6l27.4,15.8L227.8,349.1"/>
+<path class="st3" d="M255.8,366v-31.6l-27.4,15.8L255.8,366"/>
+<path class="st1" d="M227.8,382.9v-31.6l27.4,15.8L227.8,382.9"/>
+<path class="st2" d="M255.8,399.3v-31.6l-27.4,15.8L255.8,399.3"/>
+<path class="st2" d="M227.5,415.7v-31.6l27.4,15.8L227.5,415.7"/>
+<path class="st3" d="M226.2,415.7v-31.6l-27.4,15.8L226.2,415.7"/>
+<path class="st2" d="M198.5,432.7v-31.6l27.4,15.8L198.5,432.7"/>
+<path class="st3" d="M197.2,432.7v-31.6l-27.4,15.8L197.2,432.7"/>
+<path class="st2" d="M169.2,449.6V418l27.4,15.8L169.2,449.6"/>
+<path class="st3" d="M168,449.6V418l-27.4,15.8L168,449.6"/>
+<path class="st1" d="M140,432.7v-31.6l27.4,15.8L140,432.7"/>
+<path class="st3" d="M139,432.6V401l-27.4,15.8L139,432.6"/>
+<path class="st1" d="M111,415.7v-31.6l27.4,15.8L111,415.7"/>
+<path class="st3" d="M110,415.6V384l-27.4,15.8L110,415.6"/>
+<path class="st1" d="M82.8,398.1v-31.6l27.4,15.8L82.8,398.1"/>
+<path class="st2" d="M110.8,381.3v-31.6l-27.4,15.8L110.8,381.3"/>
+<path class="st1" d="M82.8,364.9v-31.6l27.4,15.8L82.8,364.9"/>
+<path class="st3" d="M110.8,348v-31.6l-27.4,15.8L110.8,348"/>
+<path class="st1" d="M82.8,331.1v-31.6l27.4,15.8L82.8,331.1"/>
+</svg>

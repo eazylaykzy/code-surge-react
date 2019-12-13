@@ -1,0 +1,268 @@
+@import "mixins";
+@import "variables";
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    letter-spacing: .1vw;
+    text-decoration: none;
+    padding: 4px 12px;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .3s;
+    position: relative;
+    font-size: $default-font-size;
+    font-weight: 700;
+
+    //Change for the <button> element
+    border: .1rem solid $color-primary;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    padding: 6px 14px;
+    color: $color-grey-dark-3;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--ghost {
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: transparent;
+    }
+
+    &-small {
+      background-color: transparent;
+      color: $color-grey-dark-2;
+      font-weight: 400 !important;
+      font-size: $default-font-size-small !important;
+
+      &::after {
+        background-color: $color-primary;
+      }
+
+      &:hover {
+        color: $color-tertiary-light;
+      }
+    }
+
+    &-submit {
+      letter-spacing: unset !important;
+      border-radius: 4px !important;
+      background-color: transparent;
+      color: $color-grey-dark-2;
+      font-weight: 400 !important;
+      font-size: $default-font-size-small !important;
+
+      &.dark {
+        border: 0.1rem solid #421254 !important;
+
+        &:hover {
+          background-color: #421254 !important;
+        }
+      }
+
+      &::after {
+        background-color: #421254;
+      }
+
+      &:hover {
+        padding: 4px 12px;
+        color: $color-tertiary-light;
+      }
+    }
+  }
+
+  &--blue {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &::after {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .3s;
+  }
+}
+
+.disabled {
+  &,
+  &:link,
+  &:visited {
+    cursor: not-allowed !important;
+    transition: unset;
+
+    &.dark {
+      border: 0.1rem solid #421254 !important;
+
+      &:hover {
+        background-color: unset !important;
+      }
+    }
+
+    &::after {
+      background-color: unset;
+    }
+
+    &:hover {
+      padding: 4px 12px;;
+      color: $color-grey-dark-2;
+      background-color: unset !important;
+    }
+  }
+}
+
+.btn-disabled {
+  color: $color-grey-dark;
+
+  &::after {
+    background-color: transparent;
+  }
+
+  &-small {
+    &,
+    &:link,
+    &:visited {
+      //Change for the <button> element
+      border: .1rem solid $color-secondary-dark !important;
+      cursor: not-allowed !important;
+    }
+
+    background-color: transparent;
+    color: $color-grey-dark-2;
+    font-weight: 400 !important;
+    font-size: $default-font-size-small !important;
+
+    &::after {
+      background-color: $color-primary;
+    }
+
+    &:hover {
+      background-color: $color-secondary-dark;
+      color: $color-white;
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* Tooltip container */
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: $color-secondary-dark-1;
+  color: $color-white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 110;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all .3s;
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+    transform: translateY(0);
+  }
+}
+
+.btn__float-left {
+  float: right;
+  @include respond(phone) {
+    float: none;
+  }
+}
+
+.btn-middle {
+  @include respond(phone) {
+    text-align: center;
+  }
+}
+
+.work-wrapper {
+  &.dark .btn {
+    &,
+    &:link,
+    &:visited {
+      //Change for the <button> element
+      border: .1rem solid $color-main-dark-purple;
+      cursor: pointer;
+    }
+    &--ghost {
+      &-small {
+        background-color: transparent;
+        font-weight: 400 !important;
+        font-size: $default-font-size-small !important;
+
+        &::after {
+          background-color: $color-main-dark-purple;
+        }
+
+        &:hover {
+          color: $color-tertiary-light;
+          background-color: $color-main-dark-purple;
+        }
+      }
+    }
+  }
+
+}
