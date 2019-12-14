@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use(cors());
-app.get('http://localhost:5000/send', function (req, res, next) {
+app.get('/send', function (req, res, next) {
 	res.json({msg: 'This is CORS-enabled for all origins!'})
 });
 
@@ -70,9 +70,7 @@ app.post('/send', (req, res) => {
 				msg: 'success'
 			})
 		}
-	});/*
-	res.writeHead(301, { Location: 'index.html' });
-	res.end();*/
+	});
 });
 
 

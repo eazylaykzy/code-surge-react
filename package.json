@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "client": "cd ./client && yarn start",
@@ -9,6 +9,11 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "start": "node server.js"
+  },
+  "proxy": {
+    "/send": {
+      "target": "http://localhost:5000"
+    }
   },
   "dependencies": {
     "body-parser": "^1.19.0",

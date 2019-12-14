@@ -2,6 +2,11 @@
   "name": "code-surge-react",
   "version": "0.1.0",
   "private": true,
+  "proxy": {
+    "/send": {
+      "target": "http://localhost:5000"
+    }
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "jquery": "^3.4.1",
