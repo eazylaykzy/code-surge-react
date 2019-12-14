@@ -5,6 +5,7 @@ const nodeMailer = require('nodemailer');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const enforce = require('express-sslify');
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
@@ -15,7 +16,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-
+app.use(enforce.HTTPS({trustProtoHeader: true}));
 app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
@@ -29,6 +30,10 @@ if (process.env.NODE_ENV === 'production') {
 app.listen(port, err => {
 	if (err) throw err;
 	console.log(`Server running on port ${port}`)
+});
+
+app.get('/service-worker.js', (req, res) => {
+	res.sendFile(path.resolve(__dirname, '..', 'build', 'service-worker.js'));
 });
 
 app.post('/send', (req, res) => {

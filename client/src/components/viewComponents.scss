@@ -28,11 +28,11 @@ h1, h2 {
 }
 
 *::-moz-selection {
-  background: #fb856f;
+  background: $color-blue;
 }
 
 *::selection {
-  background: #fb856f;
+  background: $color-blue;
 }
 
 *:hover, *:active, *:focus {
