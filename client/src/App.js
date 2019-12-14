@@ -134,7 +134,7 @@ const App = ({location: {pathname}}) => {
 	// Form submit handler
 	const handleFormSubmit = e => {
 		let url;
-		process.env.NODE_ENV === 'production' ?  url = `https://codesurge.herokuapp.com:443/send`
+		process.env.NODE_ENV === 'production' ?  url = `https://codesurge.herokuapp.com/send`
 			: url = "http://localhost:5000/send";
 		const name = nameRef.current.value, email = emailRef.current.value,
 			message = messageRef.current.value;
@@ -154,7 +154,6 @@ const App = ({location: {pathname}}) => {
 				setClearForm(true);
 				setTimeout(() => {setClearForm(false)})
 			} else if (data.msg === 'fail') {
-				console.log(data);
 				createNotification(`Hmm... Something went wrong!`);
 			}
 		})
