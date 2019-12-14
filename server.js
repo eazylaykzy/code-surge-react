@@ -3,7 +3,7 @@ const cors = require('cors');
 const path = require('path');
 const nodeMailer = require('nodemailer');
 const logger = require('morgan');
-const cookieParser = require('cookie-parser');
+// const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
@@ -14,7 +14,7 @@ const port = process.env.PORT || 5000;
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser());
+// app.use(cookieParser());
 
 app.use(cors());
 

@@ -42,7 +42,7 @@ const About = ({lineRef, aboutRef}) => (
 						<div className="line-left"/>
 						<p className="header body gap about-three">A well-organized person, problem solver, independent employee
 							with close attention
-							to detail. Fan of <strong>Footbal</strong> ⚽, outdoor activities, TV series, comics, animations, and, recently, the UFC 😍.
+							to detail. A <strong>Footbal</strong> ⚽ fan, fan of outdoor activities, TV series, comics, animations, and, recently, the UFC 😍.
 							I	genuinely <strong>care</strong> about people and love supporting fellow designers' work on their craft.</p></div>
 				</div>
 			</div>
