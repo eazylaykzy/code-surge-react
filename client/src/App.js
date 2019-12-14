@@ -133,12 +133,15 @@ const App = ({location: {pathname}}) => {
 
 	// Form submit handler
 	const handleFormSubmit = e => {
+		let url;
+		process.env.NODE_ENV === 'production' ?  url = 'https://codesurge.herokuapp.com'
+			: url = "http://localhost:5000/send";
 		const name = nameRef.current.value, email = emailRef.current.value,
 			message = messageRef.current.value;
 
 		e.preventDefault();
 		axios({
-			url: 'http://localhost:5000/send',
+			url: url,
 			method: "POST",
 			data: {
 				name,

@@ -17,9 +17,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use(cors());
-app.get('/send', function (req, res, next) {
-	res.json({msg: 'This is CORS-enabled for all origins!'})
-});
 
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static(path.join(__dirname, 'client/build')));
