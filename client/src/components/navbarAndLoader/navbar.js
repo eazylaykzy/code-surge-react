@@ -21,7 +21,7 @@ const NavBar = ({navTopRef, navBotRef, navTopIcons, navBotIcons}) => {
 					   rel="noopener noreferrer">
 						<TwitterIcon/>
 					</a>
-					<a target="_blank" className='nav-icon linkedIn' href='https://www.linkedin.com/in/eazylaykzy'
+					<a target="_blank" className='nav-icon linkedIn' href='https://www.linkedin.com/in/adelekeadeniji'
 					   rel="noopener noreferrer">
 						<Linkedln/>
 					</a>
