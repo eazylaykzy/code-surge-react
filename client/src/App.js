@@ -151,20 +151,21 @@ const App = ({location: {pathname}}) => {
 		}
 	};
 
-	const iOSMotionRequest = () => {
+	const iOSMotionRequest = async () => {
 		if (typeof DeviceMotionEvent.requestPermission === 'function') {
-			DeviceMotionEvent.requestPermission()
-				.then(response => {
-					// iOS 13+
-					alert("Please grant me access")
-					if (response === 'granted') {
-						window.addEventListener('devicemotion', (e) => {
-							// do something with e
-							alert("Thanks for granting this request")
-						})
-					}
-				})
-				.catch(console.error);
+			try {
+				const response = await DeviceMotionEvent.requestPermission();
+				// iOS 13+
+				alert(`Please grant me access: ${response}`)
+				if (response === 'granted') {
+					window.addEventListener('devicemotion', (e) => {
+						// do something with e
+						alert("Thanks for granting this request")
+					})
+				}
+			} catch (err) {
+				alert(err)
+			}
 		} else {
 			// non iOS 13+
 		}
