@@ -169,6 +169,7 @@ const App = ({location: {pathname}}) => {
             const response = await DeviceMotionEvent.requestPermission();
             isGranted = response;
             granted = response;
+            alert(`response: ${response}`);
             if (response === 'granted') {
               setTimeout(() => {
                 themeButton.current.classList.add('active');
@@ -185,7 +186,6 @@ const App = ({location: {pathname}}) => {
       }
       return granted;
     } : () => "";
-  alert(`handleDeviceMotionForiOS(): ${handleDeviceMotionForiOS()}`)
 
   useEffect(() => {
     let themeButtonEffect = themeButton.current.classList;
@@ -401,6 +401,7 @@ const App = ({location: {pathname}}) => {
       iOSVersion > 12.5 && isGranted === undefined ? deviceShakeHandler('Click to allow device motion')
         : deviceShakeHandler('Shake device to toggle night mode');
       setIsLight(localStorage.getItem('mode') === 'light');
+      alert(`handleDeviceMotionForiOS(): ${handleDeviceMotionForiOS()}`)
 
       adjustNavBars();
       window.addEventListener('resize', adjustNavBars);
