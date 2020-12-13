@@ -151,6 +151,25 @@ const App = ({location: {pathname}}) => {
 		}
 	};
 
+	const iOSMotionRequest = () => {
+		if (typeof DeviceMotionEvent.requestPermission === 'function') {
+			// iOS 13+
+			// alert("Please grant me access")
+			DeviceMotionEvent.requestPermission()
+				.then(response => {
+					if (response === 'granted') {
+						window.addEventListener('devicemotion', (e) => {
+							// do something with e
+							alert("Thanks for granting this request")
+						})
+					}
+				})
+				.catch(console.error);
+		} else {
+			// non iOS 13+
+		}
+	}
+
 	useEffect(() => {
 		let themeButtonEffect = themeButton.current.classList;
 		let navTopRefs = navTopRef.current;
@@ -176,6 +195,7 @@ const App = ({location: {pathname}}) => {
 		} else {
 			// non iOS 13+
 		}
+		notificationRef.current.click()
 
 		// Toggle Light Mode on Device Shake
 		let moveCounter = 0;
@@ -415,7 +435,7 @@ const App = ({location: {pathname}}) => {
 					className={`light-mode`}>
 					{isLight ? <Moon className='moon'/> : <Sun className='sun'/>}
 				</div>
-				<div className='dark notification' ref={notificationRef}/>
+				<div onClick={iOSMotionRequest} className='dark notification' ref={notificationRef}/>
 				<div className='view-container' ref={vc}>
 					<Switch>
 						<Route exact path='/' render={props => <Home {...props} />}/>
