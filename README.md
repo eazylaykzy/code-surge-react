@@ -7,6 +7,10 @@ This is my second approach at designing my personal web profile, the first at [C
 The major problem I had was during my implementation of [Nodemailer](https://github.com/nodemailer/nodemailer/)'s mail sending API, I look up Google, and search for the whole Stackoverflow related questions, but none of the answers fit my use case, took me a couple of days before I finally got it fixed. I did answered my own question related to this on Stackoverflow, if anyone is willing to check it out or probably faced with the same issue as me: [OPTIONS net::ERR_CONNECTION_REFUSED + The Same Origin Policy disallows reading the remote resource (Reason: CORS request did not succeed)
 ](https://stackoverflow.com/questions/59318331/options-neterr-connection-refused-the-same-origin-policy-disallows-reading-t).
 
+For Gmail users if you're getting this error ``Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+[0] 535 5.7.8  https://support.google.com/mail/?p=BadCredentials d191sm25755698wmd.24 - gsmtp
+`` in your console, remember to allow Less Secure Apps with Google account, use this link: [Less Secure Apps](https://myaccount.google.com/lesssecureapps) 
+
 ## Built with
 ### Frontend 
 

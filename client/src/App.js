@@ -132,23 +132,13 @@ const App = ({location: {pathname}}) => {
 	};
 
 	// Form submit handler
-	const handleFormSubmit = e => {
-		let url;
-		process.env.NODE_ENV === 'production' ?  url = `https://codesurge.herokuapp.com/send`
-			: url = "http://localhost:5000/send";
+	const handleFormSubmit = async e => {
 		const name = nameRef.current.value, email = emailRef.current.value,
 			message = messageRef.current.value;
 
 		e.preventDefault();
-		axios({
-			url: url,
-			method: "POST",
-			data: {
-				name,
-				email,
-				message
-			}
-		}).then(({data}) => {
+		try {
+			const {data} = await axios.post(`${process.env.REACT_APP_URL}/send`, {name, email, message});
 			if (data.msg === 'success') {
 				createNotification('Message received, thank you.');
 				setClearForm(true);
@@ -156,7 +146,9 @@ const App = ({location: {pathname}}) => {
 			} else if (data.msg === 'fail') {
 				createNotification(`Hmm... Something went wrong!`);
 			}
-		})
+		} catch (e) {
+			console.log(e);
+		}
 	};
 
 	useEffect(() => {
@@ -167,6 +159,23 @@ const App = ({location: {pathname}}) => {
 		let iconListBot = Array.from(navBotIcons.current.childNodes);
 		// viewRemChildrenActive remove active class from the view upon unmounting
 		let viewRemChildrenActive = vc.current;
+
+		//testing
+		if (typeof DeviceMotionEvent.requestPermission === 'function') {
+			// iOS 13+
+			(() => DeviceMotionEvent.requestPermission()
+				.then(response => {
+					if (response === 'granted') {
+						window.addEventListener('devicemotion', (e) => {
+							// do something with e
+							alert("Thanks for granting this request")
+						})
+					}
+				})
+				.catch(console.error))();
+		} else {
+			// non iOS 13+
+		}
 
 		// Toggle Light Mode on Device Shake
 		let moveCounter = 0;
