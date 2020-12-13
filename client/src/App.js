@@ -178,6 +178,7 @@ const App = ({location: {pathname}}) => {
 				}
 			}
 		}: () => "";
+	alert(`handleDeviceMotionForiOS(): ${handleDeviceMotionForiOS()}`)
 
 	useEffect(() => {
 		let themeButtonEffect = themeButton.current.classList;
