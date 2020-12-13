@@ -158,13 +158,11 @@ const App = ({location: {pathname}}) => {
       .replace('undefined', '3_2').replace('_', '.').replace('_', '')
   ) || false;
 
-  let isGranted;
-
-  const handleDeviceMotionForiOS = async () => {
+  const handleDeviceMotionForiOS = iOSVersion > 12.5 ? async () => {
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
       try {
         const response = await DeviceMotionEvent.requestPermission();
-        isGranted = response;
+        localStorage.setItem('deviceMotion', `${response}`);
         if (response === 'granted') {
           setTimeout(() => {
             themeButton.current.classList.add('active');
@@ -178,15 +176,9 @@ const App = ({location: {pathname}}) => {
         return err;
       }
     }
-  };
-
-  let granted;
-  handleDeviceMotionForiOS().then(res => {
-    granted = res
-  });
+  } : () => "";
 
   useEffect(() => {
-    alert(`handleDeviceMotionForiOS(): ${granted}`)
     let themeButtonEffect = themeButton.current.classList;
     let navTopRefs = navTopRef.current;
     let navBotRefs = navBotRef.current;
@@ -397,7 +389,7 @@ const App = ({location: {pathname}}) => {
           }
         }, 2500);
       };
-      iOSVersion > 12.5 && isGranted === undefined ? deviceShakeHandler('Click to allow device motion')
+      iOSVersion > 12.5 && !localStorage.getItem('deviceMotion') ? deviceShakeHandler('Click to allow device motion')
         : deviceShakeHandler('Shake device to toggle night mode');
       setIsLight(localStorage.getItem('mode') === 'light');
 
