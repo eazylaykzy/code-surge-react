@@ -1,5 +1,5 @@
-import React, {useEffect, useState, useRef} from 'react';
-import {Route, Switch, withRouter, Redirect} from "react-router-dom";
+import React, {useEffect, useRef, useState} from 'react';
+import {Redirect, Route, Switch, withRouter} from "react-router-dom";
 import axios from 'axios';
 
 import About from "./components/about/about";
@@ -150,6 +150,34 @@ const App = ({location: {pathname}}) => {
 			console.log(e);
 		}
 	};
+
+	const iOSVersion = parseFloat(
+		('' + (/CPU.*OS ([0-9_]{1,5})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0,''])[1])
+			.replace('undefined', '3_2').replace('_', '.').replace('_', '')
+	) || false;
+
+	let isGranted;
+
+	const handleDeviceMotionForiOS = iOSVersion > 12.5 ?
+		async () => {
+			if (typeof DeviceMotionEvent.requestPermission === 'function') {
+				try {
+					const response = await DeviceMotionEvent.requestPermission();
+					isGranted = response;
+					if (response === 'granted') {
+						setTimeout(() => {
+							themeButton.current.classList.add('active');
+							if (pathname === '/' && isMobile()) {
+								createNotification(`Shake device to toggle night mode`);
+							}
+						}, 2500);
+					}
+					return response;
+				} catch (err) {
+					return err;
+				}
+			}
+		}: () => "";
 
 	useEffect(() => {
 		let themeButtonEffect = themeButton.current.classList;
@@ -354,12 +382,16 @@ const App = ({location: {pathname}}) => {
 
 			// display mobile shake light mode reminder if being viewed from a phone
 			// display light mode toggle button
-			setTimeout(() => {
-				themeButtonEffect.add('active');
-				if (pathname === '/' && isMobile()) {
-					createNotification('Shake device to toggle night mode.')
-				}
-			}, 2500);
+			const deviceShakeHandler = msg => {
+				setTimeout(() => {
+					themeButtonEffect.add('active');
+					if (pathname === '/' && isMobile()) {
+						createNotification(`${msg}`)
+					}
+				}, 2500);
+			};
+			iOSVersion > 12.5 && isGranted === undefined ? deviceShakeHandler('Click to allow device motion')
+				: deviceShakeHandler('Shake device to toggle night mode');
 			setIsLight(localStorage.getItem('mode') === 'light');
 
 			adjustNavBars();
@@ -398,7 +430,7 @@ const App = ({location: {pathname}}) => {
 					className={`light-mode`}>
 					{isLight ? <Moon className='moon'/> : <Sun className='sun'/>}
 				</div>
-				<div className='dark notification' ref={notificationRef}/>
+				<div onClick={() => handleDeviceMotionForiOS()} className='dark notification' ref={notificationRef}/>
 				<div className='view-container' ref={vc}>
 					<Switch>
 						<Route exact path='/' render={props => <Home {...props} />}/>
