@@ -196,7 +196,7 @@ const App = ({location: {pathname}}) => {
 		} else {
 			// non iOS 13+
 		}
-		notificationRef.current.click()
+		setTimeout(() => notificationRef.current.click(), 1000);
 
 		// Toggle Light Mode on Device Shake
 		let moveCounter = 0;
