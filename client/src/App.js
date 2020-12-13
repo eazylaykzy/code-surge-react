@@ -160,34 +160,33 @@ const App = ({location: {pathname}}) => {
 
   let isGranted;
 
-  const handleDeviceMotionForiOS = iOSVersion > 12.5 ?
-    (granted = undefined) => {
-      // let granted;
-      if (typeof DeviceMotionEvent.requestPermission === 'function') {
-        return async () => {
-          try {
-            const response = await DeviceMotionEvent.requestPermission();
-            isGranted = response;
-            granted = response;
-            alert(`response: ${response}`);
-            if (response === 'granted') {
-              setTimeout(() => {
-                themeButton.current.classList.add('active');
-                if (pathname === '/' && isMobile()) {
-                  createNotification(`Shake device to toggle night mode`);
-                }
-              }, 2500);
+  const handleDeviceMotionForiOS = async () => {
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+      try {
+        const response = await DeviceMotionEvent.requestPermission();
+        isGranted = response;
+        if (response === 'granted') {
+          setTimeout(() => {
+            themeButton.current.classList.add('active');
+            if (pathname === '/' && isMobile()) {
+              createNotification(`Shake device to toggle night mode`);
             }
-            return response;
-          } catch (err) {
-            return err;
-          }
+          }, 2500);
         }
+        return response;
+      } catch (err) {
+        return err;
       }
-      return granted;
-    } : () => "";
+    }
+  };
+
+  let granted;
+  handleDeviceMotionForiOS().then(res => {
+    granted = res
+  });
 
   useEffect(() => {
+    alert(`handleDeviceMotionForiOS(): ${granted}`)
     let themeButtonEffect = themeButton.current.classList;
     let navTopRefs = navTopRef.current;
     let navBotRefs = navBotRef.current;
@@ -401,7 +400,6 @@ const App = ({location: {pathname}}) => {
       iOSVersion > 12.5 && isGranted === undefined ? deviceShakeHandler('Click to allow device motion')
         : deviceShakeHandler('Shake device to toggle night mode');
       setIsLight(localStorage.getItem('mode') === 'light');
-      alert(`handleDeviceMotionForiOS(): ${handleDeviceMotionForiOS()}`)
 
       adjustNavBars();
       window.addEventListener('resize', adjustNavBars);
