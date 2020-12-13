@@ -8,14 +8,7 @@ const Home = () => {
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
       try {
         const response = await DeviceMotionEvent.requestPermission();
-        // iOS 13+
-        alert(`Please grant me access: ${response}`)
-        if (response === 'granted') {
-          window.addEventListener('devicemotion', (e) => {
-            // do something with e
-            // alert("Thanks for granting this request")
-          })
-        }
+        console.log(response);
       } catch (err) {
         alert(err)
       }
