@@ -160,23 +160,6 @@ const App = ({location: {pathname}}) => {
 		// viewRemChildrenActive remove active class from the view upon unmounting
 		let viewRemChildrenActive = vc.current;
 
-		//testing
-		if (typeof DeviceMotionEvent.requestPermission === 'function') {
-			// iOS 13+
-			(() => DeviceMotionEvent.requestPermission()
-				.then(response => {
-					if (response === 'granted') {
-						window.addEventListener('devicemotion', (e) => {
-							// do something with e
-							alert("Thanks for granting this request")
-						})
-					}
-				})
-				.catch(console.error))();
-		} else {
-			// non iOS 13+
-		}
-
 		// Toggle Light Mode on Device Shake
 		let moveCounter = 0;
 		const motion = e => {
