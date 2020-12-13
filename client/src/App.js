@@ -153,10 +153,10 @@ const App = ({location: {pathname}}) => {
 
 	const iOSMotionRequest = () => {
 		if (typeof DeviceMotionEvent.requestPermission === 'function') {
-			// iOS 13+
-			// alert("Please grant me access")
 			DeviceMotionEvent.requestPermission()
 				.then(response => {
+					// iOS 13+
+					alert("Please grant me access")
 					if (response === 'granted') {
 						window.addEventListener('devicemotion', (e) => {
 							// do something with e
