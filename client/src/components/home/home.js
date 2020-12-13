@@ -13,7 +13,7 @@ const Home = () => {
         if (response === 'granted') {
           window.addEventListener('devicemotion', (e) => {
             // do something with e
-            alert("Thanks for granting this request")
+            // alert("Thanks for granting this request")
           })
         }
       } catch (err) {
