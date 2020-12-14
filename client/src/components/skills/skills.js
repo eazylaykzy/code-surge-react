@@ -40,17 +40,21 @@ const Skills = ({lineRef}) => {
 							<p className="header body about-one">
 								The main area of my expertise is backend and frontend development and
 								everything related to this side of the web. HTML, CSS, JS (ES5, ES6),
-								building small & medium Web Apps, <strong>React.js</strong>, <strong>Node</strong>,
-								<strong>Go(Golang)</strong>, and building
-								features rich content, animations, and just coding layouts.
+								building production ready small to medium Web Apps with <strong>React.JS</strong>, <strong>Next.JS</strong>,
+								<strong> Node.JS</strong>, <strong>Go(Golang)</strong>, lately, I have been building mobile applications with
+								<strong> React Native</strong> for iOS and Android OSes, I really love building features rich content,
+								animations, and just coding layouts.
 							</p>
 						</div>
 						<div className="header-content-body gap skill-two">
 							<div className="line-left"/>
 							<p className="header body about-two gap">
-								As of late, I've also been dabbling in some newer technologies like <strong>Blockchain</strong>
-								and <strong>React Native</strong>. More than anything, I am always eager to learn and adapt to
-								the ever-changing facets of the web.
+								As of late, I've also been dabbling in some newer technologies like <strong>Blockchain</strong>,
+								<strong> Microservices</strong> and <strong>Machine Learning</strong>. More than anything, I am always
+								eager to learn and adapt to the ever-changing facets of the web. <br/>
+								I'm a <strong> Top Rated 🌟 </strong> Freelancer on <strong> Upwork </strong>, you can follow this link: <br/>
+								<a style={{color: '#57a3e4'}} href="https://www.upwork.com/fl/adelekeadenijio"> Adeleke Adeniji Upwork Profile</a>
+								to view more of my projects not published here on my portfolio.
 							</p>
 						</div>
 					</div>

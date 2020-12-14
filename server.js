@@ -43,23 +43,19 @@ app.post('/send', (req, res) => {
 	let message = req.body.message;
 	let content = `name: ${name} \n email: ${email} \n message: ${message} `;
 
-	console.log("process.env.PASS: ", process.env.PASS)
-	console.log("process.env.USER: ", process.env.USER)
-
 	let transporter = nodeMailer.createTransport({
 		host: 'smtp.gmail.com',
 		port: 465,
 		secure: true,
 		auth: {
-			user: 'adelekeadenijio',
+			user: process.env.USER,
 			pass: process.env.PASS
 		}
 	});
 
-	//TODO: Please come back to fix this!!!
 	let mail = {
 		from: name,
-		to: 'adelekeadenijio@gmail.com',
+		to: process.env.USER,
 		subject: subject,
 		text: content
 	};
