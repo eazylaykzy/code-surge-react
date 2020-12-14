@@ -140,8 +140,6 @@ const App = ({location: {pathname}}) => {
     e.preventDefault();
     try {
       const {data} = await axios.post(`${URL}/send`, {name, email, message});
-      console.log("URL: ", URL);
-      console.log("process.env.NODE_ENV: ", process.env.NODE_ENV);
       if (data.msg === 'success') {
         createNotification('Message received, thank you.');
         setClearForm(true);
