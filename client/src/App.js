@@ -132,13 +132,14 @@ const App = ({location: {pathname}}) => {
   };
 
   // Form submit handler
+  const URL = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_URL : 'https://codesurge.herokuapp.com';
   const handleFormSubmit = async e => {
     const name = nameRef.current.value, email = emailRef.current.value,
       message = messageRef.current.value;
 
     e.preventDefault();
     try {
-      const {data} = await axios.post(`${process.env.REACT_APP_URL}/send`, {name, email, message});
+      const {data} = await axios.post(`${URL}/send`, {name, email, message});
       if (data.msg === 'success') {
         createNotification('Message received, thank you.');
         setClearForm(true);
